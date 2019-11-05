@@ -1,0 +1,566 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+<!-- this is the headcode include -->
+<link rel="stylesheet" href="/_resources/css/_ou/oustyles.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/_resources/web-fonts/univers-edu.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/_resources/css/top-navigation.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/_resources/css/navdrawer-responsive.css" type="text/css" media="screen" />
+<!-- page specific CSS file has been moved to common.xsl -->
+<link rel="stylesheet" href="/_resources/css/footer.css" type="text/css" media="screen" />
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" href="/_resources/css/spry-collapsible-panel.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="/_resources/js/respond.min.js"></script>
+<script src="/_resources/js/edu-menu-jquery.js"></script>
+
+<script src="/_resources/js/spry-collapsible-panel.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/_resources/css/secondary-b.css" type="text/css" media="screen, print"><link rel="stylesheet" href="/_resources/css/easy-responsive-tabs.css"><script src="/_resources/js/easy-responsive-tabs.js"></script><script type="text/javascript">
+					$(document).ready(function () {
+						$('.responsive-tabs').easyResponsiveTabs({
+							type: 'default', //Types: default, vertical, accordion
+							width: 'auto', //auto or any width like 600px
+							fit: true, // 100% fit in a container
+							closed: 'accordion'
+						});
+					});
+				</script>
+<!-- Insert google analytics here -->
+<script type="text/javascript">
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRKSKJB');
+
+</script>
+<title>Alumni // History // Marquette University</title><meta name="Description" content="Alumni from the Department of History at Marquette University."></head><body id="one">
+<noscript>  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRKSKJB" height="0" width="0" style="display:none;visibility:hidden">  </iframe></noscript>
+<div id="container"><script type="text/javascript">
+			$( document ).ready(function() {
+				// bind a click event to the 'skip' link
+				$(".skip").click(function(event){
+
+					// strip the leading hash and declare
+					// the content we're skipping to
+					var skipTo="#"+this.href.split('#')[1];
+
+					// Setting 'tabindex' to -1 takes an element out of normal 
+					// tab flow but allows it to be focused via javascript
+					$(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+
+					// when focus leaves this element, 
+					// remove the tabindex attribute
+					$(this).removeAttr('tabindex');
+
+					}).focus(); // focus on the content container
+				});
+			});
+		</script><a href="#wrapperContent" class="skip">Skip to content</a><div id="goldBar"></div><div id="topNavigation">
+  <div id="topTools">
+    <ul>
+      <li id="homepageLink"><a href="https://www.marquette.edu">marquette.edu</a> // </li>
+      <li id="searchLink"><a href="https://www.marquette.edu/search/">Search</a> // </li>
+      <li id="contactsLink"><a href="https://www.marquette.edu/tools/campus-contacts.php">Contacts</a> // </li>
+      <li id="toolsLink"><a href="https://www.marquette.edu/tools/atoz.php">A-Z Index</a></li>
+    </ul>
+  </div>
+<div id="menuContainer"><div id="mobile-header"><span class="h1"><a href="/">Marquette University</a></span><span class="h2"><a href="/history/">History</a></span></div>
+<div id="logo"><a href="/arts-sciences/"><img src="/arts-sciences/images/klingler-arts-sciences-logo.svg" alt="Klingler College of Arts and Sciences"></a><div id="siteTitle"><span class="h1"><a href="/history/">History</a></span></div>
+</div><br class="float_clear"><nav><ul id="menu"><li id="navOne" class="has-drop"><a href="/history/chair-welcome.php" class="mainItem">about<span class="arrowDown"></span></a><div id="menuOne" class="subnav"><div class="menubox2"><div class="left">
+<h3>People</h3>
+<ul>
+<li><a href="/history/chair-welcome.php">Chair's Welcome</a></li>
+<li><a href="/history/directory/">Faculty &amp;&nbsp;Staff&nbsp;Directory</a></li>
+<li><a href="/history/alumni.php">Featured Alumni</a></li>
+<li><a href="/history/doctor-philosophy-placement.php">Placement of Ph.D.s</a></li>
+</ul>
+</div><div class="right">
+<h3>Department Resources</h3>
+<ul>
+<li><a href="/history/lecture-casper.php">Casper Lecture</a></li>
+</ul>
+<ul>
+<li><a href="/history/lecture-klement.php">Klement Lecture</a></li>
+<li><a href="https://marquettehistorians.wordpress.com/">Historians@Work</a></li>
+<li><a href="/history/newsletter.php">Newsletter</a></li>
+<li><a href="/history/history-matters.php">Video: History Matters at Marquette</a></li>
+<li><a href="/history/history-department-resources.php">Department Resources</a></li>
+</ul>
+<p>&nbsp;</p>
+</div></div></div></li><li id="navTwo" class="has-drop"><a href="/history/career-history-major.php" class="mainItem">students<span class="arrowDown"></span></a><div id="menuTwo" class="subnav"><div class="menubox2"><div class="left">
+<h3>Current Students</h3>
+<ul>
+<li><a href="/history/history-honor-society.php">History Honor Society</a></li>
+<li><a href="/history/internships.php">Internships</a></li>
+<li><a href="/history/undergraduate-research.php">Research</a></li>
+<li><a href="/history/student-resources.php">Undergraduate Resources</a></li>
+<li><a href="/history/graduate-resources.php">Graduate Resources</a></li>
+<li><a href="/grad/programs-adp.php">History BA/MA&nbsp;<span>Accelerated Degree Program</span></a></li>
+</ul>
+</div><div class="right">
+<h3>Prospective Students</h3>
+<ul>
+<li><a href="/history/career-history-major.php">Why History?</a></li>
+<li><a href="/history/directory/index.php">Meet the Faculty</a></li>
+<li><a href="/history/history-matters.php">Video: History Matters at Marquette</a></li>
+<li><a href="/history/core-curriculum.php">History and the Marquette Core Curriculum</a></li>
+<li><a href="/history/undergraduate.php">Undergraduate Students</a></li>
+<li><a href="/history/graduate.php">Graduate Students</a></li>
+</ul>
+</div></div></div></li><li id="navThree" class="has-drop"><a href="/history/undergraduate.php" class="mainItem">undergraduate<span class="arrowDown"></span></a><div id="menuThree" class="subnav"><div class="menubox2"><div class="left">
+<h3>Majors</h3>
+<ul>
+<li><a href="https://bulletin.marquette.edu/undergrad/helenwayklinglercollegeofartsandsciences/history_hist/#majortext">History Major</a></li>
+<li><a href="https://bulletin.marquette.edu/undergrad/helenwayklinglercollegeofartsandsciences/history_hist/#major__american_historytext">Military History Major</a></li>
+</ul>
+<h3>Minors</h3>
+<ul>
+<li><a href="https://bulletin.marquette.edu/undergrad/helenwayklinglercollegeofartsandsciences/history_hist/#minortext">History Minor</a></li>
+<li><a href="/history/minor-public-history.php">Public History Minor</a></li>
+</ul>
+<h3>Accelerated Degree Program</h3>
+<ul>
+<li><a href="/grad/programs-adp.php">History BA/MA Program</a></li>
+</ul>
+</div><div class="right">
+<h3>Additional Information</h3>
+<ul>
+<li><a href="/explore/apply-today.php">Apply Today</a></li>
+<li>Spring 2020<a href="/history/course-descriptions.php">&nbsp;Course Descriptions</a></li>
+<li><a href="/history/history-honor-society.php">History Honor Society</a></li>
+<li><a href="/history/learning-outcomes.php">Student Learning Outcomes</a></li>
+<li><a href="/history/undergraduate.php">Undergraduate Program Overview</a></li>
+<li><a href="/history/student-resources.php">Undergraduate Resources</a></li>
+</ul>
+</div></div></div></li><li id="navFour" class="has-drop"><a href="/history/graduate.php" class="mainItem">graduate<span class="arrowDown"></span></a><div id="menuFour" class="subnav"><div class="menubox2"><div class="left">
+<h3>Master's Program</h3>
+<ul>
+<li><span><a href="/history/master-arts.php">M.A. in History</a></span></li>
+</ul>
+<h3>Ph.D. Program</h3>
+<ul>
+<li><a href="/history/doctor-philosophy.php">Ph.D. in History</a></li>
+</ul>
+<h3>Accelerated Degree Program</h3>
+<ul>
+<li><a href="/grad/programs-adp.php">History B.A./M.A. Program</a></li>
+</ul>
+</div><div class="right">
+<h3>Additional Information</h3>
+<ul>
+<li><a href="/grad/">Apply Today</a></li>
+<li><a href="/history/hgso/index.php">HGSO</a></li>
+<li><a href="/history/hgso/meet-community.php">Current Graduate Students</a></li>
+<li><a href="/history/graduate-learning-outcomes.php">Graduate Learning Outcomes</a></li>
+<li><a href="/history/graduate.php">Graduate Program Overview</a></li>
+<li><a href="/history/graduate-research.php">Graduate Research</a></li>
+<li><a href="/history/graduate-resources.php">Graduate Student Resources</a></li>
+<li><a href="/history/doctor-philosophy-placement.php">Placements of Ph.D.s</a></li>
+</ul>
+</div></div></div></li><li id="navFive" class="has-drop"><a href="/history/directory/" class="mainItem">faculty<span class="arrowDown"></span></a><div id="menuFive" class="subnav"><div class="menubox1"><ul>
+<li><a href="https://www.marquette.edu/history/directory/index.php" target="_self">Faculty &amp; Staff Directory</a></li>
+<li><a href="https://www.marquette.edu/history/faculty-office-hours.php" target="_self">Faculty Office Hours</a></li>
+<li><a href="https://www.marquette.edu/history/faculty-research.php" target="_self">Faculty Research</a></li>
+<li><a href="https://marquettehistorians.wordpress.com/" target="_self">Historians@Work</a></li>
+</ul></div></div></li><li id="navSix" class="has-drop"><a href="https://www.marquette.edu/history/undergraduate-research.php" class="mainItem">research<span class="arrowDown"></span></a><div id="menuSix" class="subnav"><div class="menubox1"><ul>
+<li><a href="/history/undergraduate-research.php">Undergraduate Research</a></li>
+<li><a href="/history/graduate-research.php">Graduate Research</a></li>
+<li><a href="/history/faculty-research.php">Faculty Research</a></li>
+</ul></div></div></li><li id="navSeven" class="has-drop"><a href="/history/give.php" class="mainItem">give</a></li></ul></nav></div></div><!-- <script src="/_resources/js/touch.js" type="text/javascript"></script> -->
+<!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" type="text/javascript"></script> -->
+
+
+<!-- mobile header menu buttons -->
+<script type="text/javascript">
+//hide loader
+$('div.ui-loader').css('display','none');
+if($('#navOne').length != 0) { $("#mobile-header span.h1").before('<div id="menuButton"><img src="/_global-images/menu-icon.png" alt="Menu" /></div>') };
+$("#mobile-header span.h2").after('<div id="searchIcon"><img src="/_global-images/search-icon.png" alt="Search" /></div>');
+$('#menuContainer #mobile-header span.h1').css('margin-left', '-30px;');
+$('#menuContainer #mobile-header span.h2').css('margin-left', '-30px;');
+	
+//count the characters in the mobile header h2. If its more than 22 including spaces, change the size of the font
+if ($('#menuContainer #mobile-header span.h2 a').text().length > 22) { /*$('#menuContainer #mobile-header span').addClass('mobileLongTitle'); */ $('#menuContainer #mobile-header span.h2').css('cssText', 'font-size: .9em !important; font-weight:bold;'); };
+
+	
+//add target to any 'A" on page if it has no target set
+if ($('a').attr('target') == undefined || $('a').attr('target') == false) {
+	$('a').attr('target','_self');
+};
+	
+//If web alert is visible Adjust the top position of the navdrawer in responsive mode
+	//var navPosition = $('nav #menu').position();
+	//alert(navPosition.top); // 79
+if ($('#website-alert').length && $(window).width()  < 700 ){
+	alertHeight = $( '#website-alert .container' ).height() + 24;
+	menuTopPosition = alertHeight + 71;
+	$('nav #menu').css('margin-top', menuTopPosition);	
+};
+	
+	
+//$('nav #menu').css('opacity', 0);
+</script>
+<!-- jquery for  nav drawer -->
+<script>
+$( document ).ready(function() {
+	
+	//add empty li item to ul#menu to solve scrolling bug in mobile view
+	$('nav ul#menu').append('<li class="listSpacer">&nbsp;</li>');
+	$('nav ul#menu .subnav').append('<li class="listSpacer">&nbsp;</li>');
+
+	
+	//initialize navdrawer and subnav menu drawer
+	navDisplay = false;
+	subnavDisplay = false;
+	
+
+	//search button link
+	$('#searchIcon').click(function() { window.location.href = "https://www.marquette.edu/search/"; });
+	
+	
+	//Control for main navdrawer menu button/arrow button
+	$('#menuButton').click(function(e) {
+		
+		
+		
+		// if navdrawer is not visible, animate it in
+		if ( navDisplay == false ) {
+			
+			
+  			$('nav #menu').animate({ left : 0, opacity : 1  }, 'fast');
+			 $( '#container' ).prepend( '<div class="overlay" onclick="">&nbsp;</div>' );
+			 $('div.overlay').css('height', $(document).height());
+			navDisplay = true;
+			
+			//set menu margin top for 
+			//drawerMarginTop = $('#mobile-header').offset().top + 73;
+			//$('nav #menu').css('margin-bottom', drawerMarginTop);
+			
+			$('#menuButton').html('<img src="/_global-images/menu-back-arrow-icon.png" alt="Back" />');
+			e.stopPropagation();
+		//If navdrawer is already visible and subnav is also visible hide subnav	
+		} else if ( navDisplay == true  && subnavDisplay == true) {
+			
+			$( '.activemenu' ).animate({ left : -303, opacity : 0  }, 'fast', function()
+					{
+						$('.activemenu').css('min-height', '0'); $( '.activemenu' ).removeClass('activemenu'); 
+					});
+			subnavDisplay = false;
+			e.stopPropagation();
+		//If navdrawer is already visible and subnav is not, hide navdrawer		
+		} else if ( navDisplay == true ) {
+			//event.stopPropagation();
+  			$('nav #menu').animate({ left : -303, opacity : 0  }, 'fast');
+			$("div.overlay").remove();
+			navDisplay = false;
+			$('#menuButton').html('<img src="/_global-images/menu-icon.png"  alt="Menu" />');
+			e.stopPropagation();
+			
+		}
+	});
+	
+	
+	$( '#menu li a .arrowDown' ).click(function(e) {
+		//alert (($(this).closest('li a')).next().attr('class'));
+		//return false;
+		/*var mainItemElement = ($(this).closest('li a')).next().attr('class');*/
+		 if ( ($(this).closest('li a')).next().attr('class') == 'subnav' ) {
+			 subnavDisplay=true;
+			//add active class 
+			$(this).closest('li a').next().addClass('activemenu');
+			$('.activemenu').css('opacity',0);
+			$('.activemenu').animate({ left :0, opacity : 1 }, 'fast');
+			//$('.activemenu').css('min-height', $(window).height());
+			 e.stopPropagation();
+			  return false;
+		 }  
+ 
+	});
+	
+	//Reveal subnav if menu option includes subnav
+	/*$( '#menu li a' ).click(function(e) {
+		 if ($(this).next().attr('class') == 'subnav') {
+			 
+			
+			 subnavDisplay=true;
+			//add active class 
+			$(this).next().addClass('activemenu');
+			$('.activemenu').css('opacity',0);
+			$('.activemenu').animate({ left :0, opacity : 1 }, 'fast');
+			$('.activemenu').css('min-height', $(window).height());
+			 e.stopPropagation();
+		 }  
+		
+	});*/
+	
+	/*$( '#menu li a' ).click(function(e) {
+		 if ( $(this).next().attr('class') == 'subnav' ) {
+			 
+			
+			
+			 subnavDisplay=true;
+			//add active class 
+			$(this).next().addClass('activemenu');
+			$('.activemenu').css('opacity',0);
+			$('.activemenu').animate({ left :0, opacity : 1 }, 'fast');
+			$('.activemenu').css('min-height', $(window).height());
+			 e.stopPropagation();
+			 //return false;
+		 }  
+		
+	});*/
+	
+	
+	
+//If nav drawer is open, close if screen is clicked outside of menu
+$('body').on('click', function(e){
+	if (navDisplay == true) {
+			
+			  if (!$(e.target).closest("#menu, #subnav, #mobile-header").length) {
+				//reset drawer positions
+				$('nav #menu').animate({ left : -303, opacity : 0  }, 'fast', function() { $( '.activemenu' ).css( 'left', '-303px' ); $('.activemenu').css('min-height', '0'); $( '.activemenu' ).removeClass('activemenu'); } );
+				$("div.overlay").remove();
+				navDisplay = false; 
+				subnavDisplay = false;
+				$('#menuButton').html('<img src="/_global-images/menu-icon.png"  alt="Menu" />');	
+				e.stopPropagation();
+		}
+	}
+	});
+	
+	
+	//swipe handler
+	$(function(){
+  // Bind the swipeHandler callback function to the swipe event on div.box
+  $( "#menu" ).on( "swipeleft", swipeHandler );
+ 
+  // Callback function references the event target and adds the 'swipe' class to it
+  function swipeHandler( e ){
+	 e.stopPropagation();
+   	$('nav #menu').animate({ left : -303, opacity : 0 }, 'fast', function() { $( '.activemenu' ).css( 'left', '-303px' ); $('.activemenu').css('min-height', '0'); $( '.activemenu' ).removeClass('activemenu'); } );
+				$("div.overlay").remove();
+				navDisplay = false; 
+				subnavDisplay = false;
+				$('#menuButton').html('<img src="/_global-images/menu-icon.png"  alt="Menu" />');	
+   
+  }
+});
+
+
+
+
+/*$('#menu').bind('touchstart', function(e) {
+    ts = e.originalEvent.touches[0].clientX;
+});
+
+$('#menu').bind('touchmove', function(e) {
+    var te = e.originalEvent.changedTouches[0].clientX;
+    if (ts > te) {
+        alert('left');
+    } 
+});*/
+	 
+ 
+});
+
+</script>
+
+<script>
+// Change menu based on screen resize for non-mobile browsers
+$( window ).resize(function(e) {
+	//reset back to normal screen menu
+	if ($(window).width()  > 700) {
+		//return nav menu position if alert is visible
+		//if ($('#website-alert').length() { $('nav #menu').css('margin-top', 73);}
+		$('nav #menu').css('margin-top', 10);
+		//return menu icon, hide screen overlay, reset activemenu height
+		//$('nav #menu').css('margin-top', 10);
+    	$('div.overlay').remove();
+		$('#menuButton').html('<img src="/_global-images/menu-icon.png" alt="Menu" />'); 
+		$('.activemenu').css('min-height', '0');
+		$('nav #menu').css('left', '0px');
+		$('nav #menu').css('opacity', 1);
+		// if nav menu and subnav menu are both open
+		if (navDisplay == true && subnavDisplay == true) {
+			$( '.activemenu' ).css( 'left' , '-303px' );
+			$( '.activemenu' ).removeClass('activemenu');
+			$('nav #menu').css('left', '0px');
+			navDisplay = false;
+			subnavDisplay = false;
+			e.stopPropagation();
+		// if nav menu is open but subnav menu is closed
+		} else if (navDisplay == true  && subnavDisplay == false) {
+			$('nav #menu').css('left', '0px');
+			navDisplay = false;
+			e.stopPropagation();
+		//default return menu to normal position
+		} else {
+			$('nav #menu').css('left', '0px');
+			e.stopPropagation();
+		}
+	//set nav position for slider
+	} else if ($(window).width()  <= 700 && navDisplay == false) {
+		
+		//adjust menu top position based on alert window height
+		
+		if ($('#website-alert').length ){
+	alertHeight = $( '#website-alert .container' ).height() + 24;
+	menuTopPosition = alertHeight + 73;
+	$('nav #menu').css('margin-top', menuTopPosition);	
+	} else { $('nav #menu').css('margin-top', 71);	}
+	//end alert window adjustment
+		
+		$('nav #menu').css('left', '-303px');
+		e.stopPropagation();
+		
+	}
+})
+</script><div id="wrapperContent"><div id="leftContent" role="main"><div id="pageIdentity"><div id="breadcrumbs"><p><a href="/">Marquette.edu</a>&nbsp;//&nbsp;<a href="/history/">History</a>&nbsp;//&nbsp;</p></div><div id="pageName"><h1>Featured Alumni</h1></div></div><p><span>The History Department&nbsp;has generated some outstanding alumni&nbsp;who have&nbsp;excelled in academia. Below, our Featured Alumni share their interests in History, their scholarly work, and&nbsp;their career paths.</span></p>
+<div class="responsive-tabs" id="horizontalTab"><ul class="resp-tabs-list"><li>
+ Chris Lese 
+</li><li>
+ Greg St. Arnold 
+</li><li>
+ &nbsp;Heather Marie Stur 
+</li><li>
+ Nora Kennelly 
+</li></ul><div class="resp-tabs-container"><div>
+<p><img style="float: left; margin-right: 8px; margin-left: 8px;" src="/history/images/chris-lese.jpg" alt="Chris" width="200" height="191">I graduated in 1997 with a History major and a minor in Political Science. After a year teaching high school history, I matriculated to the University of Wisconsin-Milwaukee for a MA in Public History and Historic Preservation. From there I worked as a Public Historian in a Cultural Resource Management Firm and then my own architectural design firm until 2009. I had always felt a calling to teach history, however, and I completed a BA in Secondary Education from Cardinal Stritch University in 2010. I currently teach history at Marquette University High School where I was awarded a Wisconsin Herb Kohl Teaching Fellowship. Future professional development will include more graduate level work in history and education administration.</p>
+<p>As a student in the MU History Department, I was challenged to engage the public in a variety of ways through participation in both local and national field schools and internships. This wide variety of immersion experiences continue to enhance my teaching inside and outside of the classroom. Inside the classroom, my students have engaged with a wide array of historians and historical organizations. That spirit of public engagement influences my students on my Civil War-era adventure trips and a Civil War Summer Institute geared for younger aged students.</p>
+</div><div>
+<p><span><img style="float: left; margin-right: 8px; margin-left: 8px;" src="/history/images/st-arnold.png" alt="Arnold" width="201" height="250">I graduated from Marquette in 2007 with a Bachelor of Arts in History and a cross-disciplinary minor in Africana Studies. I was also a graduate of the Honors Program and a Burke Scholar. I am a former Teach for America corps member (Phoenix 2008), where I taught middle school special education and earned a Master's of Education in Special Education from Arizona State University. After my time in Phoenix, I moved back to Milwaukee and taught middle and high school special education for six years. In 2016, I joined the Jesuit Refugee Service, where I continue to serve as the Regional Education Coordinator for Eastern and Southern Africa.</span></p>
+<p>What first drew me to the history department was the experience of learning American history from a passionate and animated high school teacher, Lee Bouchonville, who got me more excited about history than any other school subject. As I began to study history more rigorously at Marquette, what I learned most was to become very curious about the narrative - to really understand the contours of particular historian's story, to learn about the context in which that story was crafted, and to figure out why that story was important or resonant. That curiosity has stuck with me professionally to this day and helps me really push myself to develop incisive questions, thorough answers, and sound analyses for the complicated issues that face me and my colleagues every day.</p>
+<p>There's also tremendous value for me in having a good baseline level of knowledge about the history of modern Africa, which I was able to gain through my studies at Marquette. Knowing about patterns of human settlement, the impact of European colonialism, and the political history of different countries provides me with a more robust framework to interpret the current context and work with colleagues towards durable solutions.</p>
+<p>Finally, studying history has helped me to be wary of our very human tendency towards simplistic diagnoses and solutions - what Chimamanda Ngozi Adichie has eloquently called "the danger of the single story". Really striking historical analysis spans across multiple domains - social, political, economic, demographic, geographic - and makes use of a wide range of sources to establish its arguments. No source is a silver bullet or a smoking gun - instead, each piece of information contributes to a deeper level of understanding, and ought to also prompt more critical questions. The human experience is complex, the world is vast and uneven, and studying history helped me appreciate these truths and become more comfortable with our discordant shared realities.</p>
+</div><div>
+<p><img style="float: left; margin-right: 10px; margin-left: 10px;" src="/history/images/heather.png" alt="heather" width="200" height="250">“My interest in history has always been directly tied to my desire to understand the world today. As a historian, my end goal—in both my teaching and my writing—is to provide historical context for hot current issues like the significance of America’s role in NATO, women in combat, and U.S. nation building efforts in Afghanistan. This is why it is important to me to write op-eds, blog posts, and articles in popular newspapers and magazines – I believe that I have a responsibility as a historian to use my expertise to provide historical context on contemporary issues to as broad a public audience as possible beyond the literal walls of the classroom and the figurative walls of academia.”</p>
+<p>Heather Stur graduated from Marquette University in 1998 with bachelors degrees in journalism and history. After working as a newspaper reporter for three years, she returned to Marquette in 2001 and received her MA in history in 2003. After earning her Ph.D. in history from the University of Wisconsin in 2008, she joined the faculty at the University of Southern Mississippi. Heather is the author of <em>Beyond Combat: Women and Gender in the Vietnam War Era </em>(2011), co-editor of <em>Integrating the U.S. Military: Race, Gender, and Sexual Orientation Since World War II </em>(2017), and author of numerous articles, book chapters, and blog posts, which have appeared in the <em>New York Times, </em>the <em>National Interest</em>, the <em>Orange County Register</em>, and various academic journals and anthologies. During the 2013-14 academic year, Heather was a Fulbright scholar in Vietnam, where she was a professor in the Faculty of International Relations at the University of Social Sciences and Humanities in Ho Chi Minh City.</p>
+</div><div>
+<p><img style="float: left; margin-right: 8px; margin-left: 8px;" src="/history/images/kennelly.jpg" alt="Kenelly" width="211" height="250">I graduated in 2012 with a double major in History and Secondary Education and a minor in Justice and Peace Studies. As a student, I was active at the Marquette University Center for Peacemaking, where I received a fellowship to work in Israel-Palestine. I also had the opportunity to study abroad in South Africa and intern in Northern Ireland. I was active in Phi Alpha Theta the History honor society. After graduation, I served as a Jesuit Volunteer in rural Alaska working at an alternative boarding school. I received a Rotary Global Grant Scholarship to study human rights and transitional justice at the Irish Center for Human Rights. After graduate school, I accepted a position with Heartland Alliance at a residential facility for unaccompanied minors in federal immigration custody. During my time with Heartland Alliance, I realized that I would be more effective as a mental health care provider; I am currently pursuing this goal studying to be a Mental Health Nurse Practitioner. As a Mental Health Nurse Practitioner, I will be able to continue working with youth in conjunction with school counselors, teachers, psychiatrists to provide holistic care to youth.</p>
+<p>I am forever grateful for the friends, faculty, and community that shaped my time at Marquette University. I benefited from the Marquette community in both my professional and personal life. My history education challenged me to develop the critical thinking and writing skills, which allowed me to excel as an educator and social worker. The global perspectives and deep discussions I had with faculty members prepared me to work both abroad and in the United States. My time at Marquette challenged the way I analyzed history, the way I analyzed the world around me, and that has helped me develop the courage to be a woman for others and a network of friends and alum working on the most pressing problems facing our world.</p>
+</div></div></div>
+</div><div id="sidebarRightImage"><div id="mainImage"><img src="/history/images/featured-alumni.png" alt=""></div><div id="sidebarRight"><div id="columnHeader"><h2>about</h2></div><div id="content"><h2>PEOPLE</h2>
+<ul>
+<li><a href="http://www.marquette.edu/history/chair-welcome.php">Chair's Welcome</a></li>
+<li><a href="http://www.marquette.edu/history/directory/index.php">Faculty &amp;&nbsp;Staff&nbsp;Directory</a></li>
+<li><a href="http://www.marquette.edu/history/alumni.php">Featured Alumni</a></li>
+<li><a href="http://www.marquette.edu/history/doctor-philosophy-placement.php">Placements of Ph.D.s</a></li>
+</ul>
+<hr>
+<h2>DEPARTMENT RESOURCES</h2>
+<ul>
+<li><a href="http://www.marquette.edu/history/lecture-casper.php">Casper Lecture</a></li>
+<li><a href="http://www.marquette.edu/history/lecture-klement.php">Klement Lecture</a></li>
+<li><a href="https://marquettehistorians.wordpress.com/">Historians@Work</a></li>
+<li><a href="http://www.marquette.edu/history/newsletter.php">Newsletter</a></li>
+<li><a href="/history/history-matters.php">Video: History Matters at Marquette</a></li>
+<li><a href="http://www.marquette.edu/history/history-department-resources.php">Department Resources</a></li>
+</ul><hr><h2>CONTACT</h2>
+<p><strong>Department of History<br></strong><span>Sensenbrenner Hall, 202A</span><br><span>1103 W. Wisconsin Avenue&nbsp;</span><br><span>Milwaukee, WI 53233</span><br><span>(414) 288-7217</span></p>
+<p><a href="https://www.marquette.edu/history/contact.php">Contact Us</a></p>
+<hr>
+<h2>HISTORY ON SOCIAL<br><br><a href="https://www.facebook.com/muhistory202/"><img src="/_resources/snippet-images/facebook.png" alt="Facebook"><br><br><br></a></h2>
+<hr>
+<h2>PROBLEM WITH THIS WEBPAGE?</h2>
+<p><a href="https://www.marquette.edu/accessible-technology/report-accessibility-issue.php?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=web_partners_oct_19" rel="noopener noreferrer" target="_blank" data-auth="NotApplicable">Report an accessibility problem<br><br></a>To report another problem, please contact&nbsp;<a href="mailto:jolene.kreisler@marquette.edu" rel="noopener noreferrer" target="_blank" data-auth="NotApplicable">jolene.kreisler@marquette.edu</a><span>.</span></p></div></div></div><br class="float_clear"><br class="float_clear"></div><div id="footer">
+  <div class="footerContent">
+    <div class="column3">
+      <span class="h1">Location</span>
+      <p><strong>Marquette University</strong><br />
+        <a href="/visit/">Sensenbrenner Hall, 202A</a><br />
+        Milwaukee, WI 53233<br />
+        <strong>Phone: </strong>(414) 288-7217</p>
+    </div>
+    <div class="column3">
+      <span class="h1">Key Resources</span>
+      <ul class="columnsLeft">
+		<li><a href="/tools/campus-contacts.php">Campus contacts</a></li>
+        <li><a href="/visit/map.php">Campus map</a></li>
+        <li><a href="/tools/contact-us.php">Contact us</a></li>
+        <li><a href="/search/">Search marquette.edu</a></li>
+      </ul>
+      <ul class="columnsRight">
+        <li><a href="https://portal.office.com/">eMarq</a></li>
+        <li><a href="https://checkmarq.mu.edu">CheckMarq</a></li>
+        <li><a href="https://d2l.mu.edu">D2L</a></li>
+        <li><a href="https://myjob.mu.edu">MyJob</a></li>
+      </ul>
+    </div>
+    <div class="column3 siteindex last">
+      <span class="h1">MARQUETTE A to Z</span>
+      <p><a href="/tools/atoz.php?index=a">A</a><a href="/tools/atoz.php?index=b">B</a><a href="/tools/atoz.php?index=c">C</a><a href="/tools/atoz.php?index=d">D</a><a href="/tools/atoz.php?index=e">E</a><a href="/tools/atoz.php?index=f">F</a><a href="/tools/atoz.php?index=g">G</a><a href="/tools/atoz.php?index=h">H</a><a href="/tools/atoz.php?index=i">I</a><a href="/tools/atoz.php?index=j">J</a><a href="/tools/atoz.php?index=k">K</a><a href="/tools/atoz.php?index=l">L</a><a href="/tools/atoz.php?index=m">M</a> <a href="/tools/atoz.php?index=n"> N</a><a href="/tools/atoz.php?index=o">O</a><a href="/tools/atoz.php?index=p">P</a><a href="/tools/atoz.php?index=q">Q</a><a href="/tools/atoz.php?index=r">R</a><a href="/tools/atoz.php?index=s">S</a><a href="/tools/atoz.php?index=t">T</a><a href="/tools/atoz.php?index=u">U</a><a href="/tools/atoz.php?index=v">V</a><a href="/tools/atoz.php?index=w">W</a><a href="/tools/atoz.php?index=xyz">X</a><a href="/tools/atoz.php?index=xyz">Y</a><a href="/tools/atoz.php?index=xyz">Z</a></p>
+    </div>
+    <br class="float_clear" />
+  </div>
+
+  <div id="lowerFooter">
+    <div class="footerContent"> <a href="https://www.marquette.edu"><img alt="Marquette University logo" src="/_global-images/marquette-logo.svg"></a>
+      <p><a href="/tools/privacy.php">Privacy Policy</a> <a href="/tools/legal.php">Legal Disclaimer</a> <a href="/tools/non-discrimination.php">Non-Discrimination Policy</a> <a href="https://www.marquette.edu/accessible-technology/">Accessible Technology</a></p>
+      <p> <span id="directedit">&copy;</span> 2019 Marquette University</p>
+      <br class="float_clear" />
+    </div>
+  </div>
+
+<!--  Adroll Pixel -->
+<!-- Script from adroll -->
+<!--
+<script type="text/javascript">
+adroll_adv_id = "LBGSH3XYOBF25MAUTUFJPA";
+adroll_pix_id = "VYJPPHCPAFGHJBMCVGLDIC";
+/* OPTIONAL: provide email to improve user identification */
+/* adroll_email = "username@example.com"; */
+(function () {
+var _onload = function(){
+if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+var scr = document.createElement("script");
+var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+scr.setAttribute('async', 'true');
+scr.type = "text/javascript";
+scr.src = host + "/j/roundtrip.js";
+((document.getElementsByTagName('head') || [null])[0] ||
+document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+};
+if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+else {window.attachEvent('onload', _onload)}
+}());
+</script>
+-->
+
+<!-- Updated by Dwayne Burtin on 4/3/18 to manually control pixel -->
+<script type="text/javascript">
+$(document).ready(function () {
+	
+    //adroll test
+	if (typeof adroll_false_test !== 'undefined') {
+		//do not load adroll pixel
+	} else {
+		// Adroll Pixel
+		adroll_adv_id = "LBGSH3XYOBF25MAUTUFJPA";
+		adroll_pix_id = "VYJPPHCPAFGHJBMCVGLDIC";
+		/* OPTIONAL: provide email to improve user identification */
+		/* adroll_email = "username@example.com"; */
+		(function () {
+			var _onload = function(){
+			if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+			if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+			var scr = document.createElement("script");
+			var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+			scr.setAttribute('async', 'true');
+			scr.type = "text/javascript";
+			scr.src = host + "/j/roundtrip.js";
+			((document.getElementsByTagName('head') || [null])[0] ||
+				document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+			};
+			if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+				else {window.attachEvent('onload', _onload)}
+			}());
+	}
+});
+</script>
+</div>
+<script src="/_resources/js/direct-edit.js"></script>
+<div id="hidden" style="display:none;"><div style="display: none"><a id="de" href="http://ou.mu.edu/10?skin=oucampus&amp;account=Marquette&amp;site=www&amp;action=de&amp;path=/history/alumni.pcf">©</a></div></div></div></body></html>
