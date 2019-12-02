@@ -229,13 +229,14 @@
     }
     //alert("about to push ")
     //alert(data)
-    eventsRef.push(data, finished);
+   // eventsRef.push(data, finished);
     //alert("after push")
     function finished(error) {
       if (error) {
-        aler("error")
+        alert("error")
         console.log('ooops');
       } else {
+        alert("data saved")
         console.log('data saved!');
      }
     }

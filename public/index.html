@@ -338,12 +338,13 @@
         description: "description2"
       }
       alert("about to push ")
-      alert(data)
+      alert(data.name)
       eventsRef.push(data, finished);
       alert("after push")
       function finished(error) {
         if (error) {
           alert("error")
+          alert(error)
           console.log('ooops');
         } else {
           alert
