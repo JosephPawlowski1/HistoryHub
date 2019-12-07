@@ -1,6 +1,6 @@
 $( "#learnMore" ).click(function() {
     alert( "Handler for .click() called." );
-    document.location.href = 'events-info.html';
+    document.location.href = "events-info.html";
   });
 
   $( "#learnMore2" ).click(function() {

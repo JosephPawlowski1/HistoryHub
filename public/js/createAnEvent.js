@@ -1,6 +1,6 @@
 
 $("#createAnEvent").click(function () {
-  alert("Handler for .click() called.");
+  //alert("Handler for .click() called.");
   document.location.href = 'createAnEvent.html';
 });
 
@@ -18,14 +18,14 @@ $("#createEventBTN").click(function (){
     appId: "1:752721294693:web:116701c67ce46f49859d8c",
     measurementId: "G-5GP36786WK"
   };
-  alert("before firebase intitalizeApp")
-  alert(firebase.app.length)
+  //alert("before firebase intitalizeApp")
+  //alert(firebase.app.length)
   if (!firebase.apps.length) {
-    alert("in if statement")
+    //alert("in if statement")
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   }
-  alert("after firevase intitalizeApp")
+  //alert("after firevase intitalizeApp")
   var name2 = $("input#name").val();
   var location2 = $("input#location").val();
   var time2 = $("input#time").val();
@@ -34,30 +34,30 @@ $("#createEventBTN").click(function (){
   //alert(location2);
   //alert(time2);
   //alert(description2);
-  alert("firebase refereance")
+  //alert("firebase refereance")
   var dbRef2 = firebase.database();
   var eventsRef2 = dbRef2.ref('events');
- alert("after database referance")
- alert(dbRef2)
- alert(eventsRef2)
+ //alert("after database referance")
+ //alert(dbRef2)
+ //alert(eventsRef2)
   var data2 = {
     name: name2,
     location: location2,
     time: time2,
     description: description2
   }
-  alert("about to push")
+  //alert("about to push")
   //alert(data2.name)
   eventsRef2.push(data2,finished);
-  alert("after push")
+  //alert("after push")
   function finished(error) {
     alert(error)
     if (error) {
-      alert("error")
+    //  alert("error")
       alert(error)
       console.log('ooops');
     } else {
-      alert("data saved")
+      //alert("data saved")
       console.log('data saved!');
     }
   }

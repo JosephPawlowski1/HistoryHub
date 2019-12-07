@@ -221,25 +221,22 @@
     var dbRef = firebase.database();
     var dbRef = firebase.database();
     var eventsRef = dbRef.ref('events');
-    var data = {
-     name: "name3",
-      location: "location3",
-      time: "time3",
-      description: "description3"
+    eventsRef.on("value",gotData, errData);
+
+
+    function gotData(data){
+      var event = data.val();
+      var keys = Object.keys(events);
+
+      for (var i = 0; i < keys.length; i++){
+      var key = keys[i];
+      alert(key);
+      var event = events[key];
+      alert(event);
+      } 
     }
-    //alert("about to push ")
-    //alert(data)
-   // eventsRef.push(data, finished);
-    //alert("after push")
-    function finished(error) {
-      if (error) {
-        alert("error")
-        console.log('ooops');
-      } else {
-        alert("data saved")
-        console.log('data saved!');
-     }
-    }
+
+
 
   }
   </script>

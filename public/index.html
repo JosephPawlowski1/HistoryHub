@@ -309,7 +309,7 @@
 
   <script> //Firebase 
     function setup() {
-      alert("hello")
+      //alert("hello")
       const firebaseConfig = {
         apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
         authDomain: "historyunited-61508.firebaseapp.com",
@@ -320,14 +320,14 @@
         appId: "1:752721294693:web:116701c67ce46f49859d8c",
         measurementId: "G-5GP36786WK"
       };
-      alert("before firebase intitalizeApp")
+      //alert("before firebase intitalizeApp")
       if (!firebase.apps.length) {
-       alert("in if statement")
+      // alert("in if statement")
         firebase.initializeApp(firebaseConfig);
      }
-      alert("after firevase intitalizeApp")
+     // alert("after firevase intitalizeApp")
       firebase.analytics();
-      alert("firebase refereance")
+     // alert("firebase refereance")
       var dbRef = firebase.database();
       var dbRef = firebase.database();
       var eventsRef = dbRef.ref('events');
@@ -337,20 +337,20 @@
         time: "time2",
         description: "description2"
       }
-      alert("about to push ")
-      alert(data.name)
-      eventsRef.push(data, finished);
-      alert("after push")
-      function finished(error) {
-        if (error) {
-          alert("error")
-          alert(error)
-          console.log('ooops');
-        } else {
-          alert
-          console.log('data saved!');
-       }
-      }
+      //alert("about to push ")
+      //alert(data.name)
+      //eventsRef.push(data, finished);
+      //alert("after push")
+      //function finished(error) {
+        //if (error) {
+       //   alert("error")
+         // alert(error)
+          //console.log('ooops');
+       // } else {
+         // alert
+         // console.log('data saved!');
+       //}
+     // }
 
     }
 

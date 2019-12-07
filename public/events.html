@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body onload="setup()">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -146,9 +146,9 @@
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Event One </h4>
+          <h4 id = "eventOneHeader" class="card-header">Event One </h4>
           <div class="card-body">
-            <p class="card-text">Information about Event One</p>
+            <p id = "eventOneBody" class="card-text"></p>
           </div>
           <div class="card-footer">
             <a id = "learnMore" href="#" class="btn btn-primary">Learn More</a>
@@ -159,7 +159,7 @@
         <div class="card h-100">
           <h4 class="card-header">Event Two</h4>
           <div class="card-body">
-            <p class="card-text">Information about Event Two</p>
+            <p id = "eventTwoBody" class="card-text">Information about Event Two</p>
           </div>
           <div class="card-footer">
             <a id = "learnMore2" href="#" class="btn btn-primary">Learn More</a>
@@ -204,10 +204,71 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+  <script> 
+  var eventKey;
+  var keys;
+  function setup() {
+    alert("hello")
+    const firebaseConfig = {
+      apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
+      authDomain: "historyunited-61508.firebaseapp.com",
+      databaseURL: "https://historyunited-61508.firebaseio.com",
+      projectId: "historyunited-61508",
+      storageBucket: "historyunited-61508.appspot.com",
+      messagingSenderId: "752721294693",
+      appId: "1:752721294693:web:116701c67ce46f49859d8c",
+     measurementId: "G-5GP36786WK"
+    };
+    alert("before firebase intitalizeApp")
+    if (!firebase.apps.length) {
+     alert("in if statement")
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+   }
+   alert("after firevase intitalizeApp")
+    firebase.analytics();
+   alert("firebase refereance")
+    var dbRef3 = firebase.database();
+    //var eventsRef3 = dbRef3.ref('events');
+    alert("before database ref")
+    var eventsGetRef = dbRef3.ref("events");
+    alert("after database ref");
+    alert("before firebase get")
+    eventsGetRef.on("value",gotData);
+    alert("after firebase get")
+
+    function gotData(data){
+      var eventOneHeader= document.getElementById("eventOneHeader");
+      var eventOneBody = document.getElementById("eventOneBody");
+      alert("in gotData fuction")
+      var events = data.val();
+      keys = Object.keys(events);
+      sessionStorage.setItem("keys", keys);
+      for (var i = 0; i < keys.length; i++){
+      var key = keys[i];
+      alert(key);
+      var event = events[key];
+      alert(event.name)
+      eventOneHeader.innerHTML = event.name;
+      eventOneBody.innerHTML= event.location + event.time;
+      } 
+      
+    }
+
+  
+
+  }
+  </script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src = "js/learnMore.js"></script>
   <script src = "js/createAnEvent.js"></script>
+  
+
+
+
 
 </body>
 
