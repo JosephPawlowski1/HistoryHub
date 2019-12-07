@@ -26,9 +26,8 @@
 
       <a class="navbar-brand" href="index.html">History Hub</a>
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -135,15 +134,15 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3"> Event Name
-      
+    <h1 id = "eventHeader" class="mt-4 mb-3"> Event Name
+
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
         <a href="index.html">Event Subheading</a>
       </li>
-      
+
     </ol>
 
     <!-- Intro Content -->
@@ -151,17 +150,22 @@
       <div class="col-lg-6">
         <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
       </div>
-      <div class="col-lg-6">
+      <div id = "eventBody" class="col-lg-6">
         <h2>Event description</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique?
+          Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem
+          non blanditiis ex fugiat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut
+          sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa
+          voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus
+          perspiciatis quis?</p>
       </div>
     </div>
     <!-- /.row -->
 
-    
-  
+
+
 
   </div>
   <!-- /.container -->
@@ -175,15 +179,67 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
-  function setup() { 
-    var keys = sessionStorage.getItem("keys");
-  alert(keys[0])
-  }
-  
-  
+    function setup() {
+      const firebaseConfig = {
+        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
+        authDomain: "historyunited-61508.firebaseapp.com",
+        databaseURL: "https://historyunited-61508.firebaseio.com",
+        projectId: "historyunited-61508",
+        storageBucket: "historyunited-61508.appspot.com",
+        messagingSenderId: "752721294693",
+        appId: "1:752721294693:web:116701c67ce46f49859d8c",
+        measurementId: "G-5GP36786WK"
+      };
+      //alert("before firebase intitalizeApp")
+      if (!firebase.apps.length) {
+      // alert("in if statement")
+        firebase.initializeApp(firebaseConfig);
+     }
+     // alert("after firevase intitalizeApp")
+      firebase.analytics();
+     // alert("firebase refereance")
+      var dbRefEvent = firebase.database();
+      
+      var keys = sessionStorage.getItem("keys");
+      //alert(keys)
+
+      var key1 = sessionStorage.getItem("key1");
+      var key2 = sessionStorage.getItem("key2");
+      var key3 = sessionStorage.getItem("key3");
+      //alert(key1);
+      var learnMoreNum = sessionStorage.getItem("learnMoreNum");
+      alert(learnMoreNum)
+      if(learnMoreNum == '1'){
+        alert(key1);
+        var eventGetOneRef =dbRefEvent.ref('events/'+key1);
+        eventGetOneRef.on("value",gotData);
+        
+
+      }else if(learnMoreNum == '2'){
+        alert(key2);
+        var eventGetOneRef =dbRefEvent.ref('events/'+key2);
+        eventGetOneRef.on("value",gotData);
+      }else if(learnMoreNum == '3'){
+        alert(key3);
+        var eventGetOneRef =dbRefEvent.ref('events/'+key3);
+        eventGetOneRef.on("value",gotData);
+      }
+      function gotData(data) {
+
+         var eventHeader = document.getElementById("eventHeader");
+         var eventBody = document.getElementById("eventBody");
+         var event = data.val();
+         eventHeader.innerHTML =  event.name;
+         eventBody.innerHTML = event.description;
+      }
+    }
+
+
   </script>
 
 </body>

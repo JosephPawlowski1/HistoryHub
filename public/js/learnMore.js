@@ -1,19 +1,23 @@
 $( "#learnMore" ).click(function() {
     alert( "Handler for .click() called." );
     document.location.href = "events-info.html";
+    sessionStorage.setItem("learnMoreNum", '1');
   });
 
   $( "#learnMore2" ).click(function() {
     alert( "Handler for .click() called." );
     document.location.href = 'events-info.html';
+    sessionStorage.setItem("learnMoreNum", '2');
   });
 
   $( "#learnMore3" ).click(function() {
     alert( "Handler for .click() called." );
     document.location.href = 'events-info.html';
+    sessionStorage.setItem("learnMoreNum", '3');
   });
 
   $( "#learnMore4" ).click(function() {
     alert( "Handler for .click() called." );
     document.location.href = 'events-info.html';
+    sessionStorage.setItem("learnMoreNum", '4');
   });

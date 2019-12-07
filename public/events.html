@@ -24,7 +24,8 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">History Hub</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -37,9 +38,10 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="classes.html">Classes</a>
-          </li>     
+          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               Professors
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
@@ -81,7 +83,7 @@
       </div>
     </div>
   </nav>
-<!--    
+  <!--    
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -146,50 +148,50 @@
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 id = "eventOneHeader" class="card-header">Event One </h4>
+          <h4 id="eventOneHeader" class="card-header"> </h4>
           <div class="card-body">
-            <p id = "eventOneBody" class="card-text"></p>
+            <p id="eventOneBody" class="card-text"></p>
           </div>
           <div class="card-footer">
-            <a id = "learnMore" href="#" class="btn btn-primary">Learn More</a>
+            <a id="learnMore" href="#" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Event Two</h4>
+          <h4 id="eventTwoHeader" class="card-header"> </h4>
           <div class="card-body">
-            <p id = "eventTwoBody" class="card-text">Information about Event Two</p>
+            <p id="eventTwoBody" class="card-text"> </p>
           </div>
           <div class="card-footer">
-            <a id = "learnMore2" href="#" class="btn btn-primary">Learn More</a>
+            <a id="learnMore2" href="#" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Event Three</h4>
+          <h4 id="eventThreeHeader" class="card-header"></h4>
           <div class="card-body">
-            <p class="card-text">Information about Event Three</p>
+            <p id="eventThreeBody" class="card-text"> </p>
           </div>
           <div class="card-footer">
-            <a id = "learnMore3" href="#" class="btn btn-primary">Learn More</a>
+            <a id="learnMore3" href="#" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Event Four</h4>
+          <h4 class="card-header"></h4>
           <div class="card-body">
-            <p class="card-text">Information about Event Four</p>
+            <p class="card-text"></p>
           </div>
           <div class="card-footer">
-            <a id = "learnMore4" href="#" class="btn btn-primary">Learn More</a>
+            <a id="learnMore4" href="#" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
     </div>
-    <a id = "createAnEvent" href="#" class="btn btn-primary">Create an Event</a>
+    <a id="createAnEvent" href="#" class="btn btn-primary">Create an Event</a>
     <!-- /.row -->
 
   </div>
@@ -206,66 +208,81 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-  <script> 
-  var eventKey;
-  var keys;
-  function setup() {
-    alert("hello")
-    const firebaseConfig = {
-      apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-      authDomain: "historyunited-61508.firebaseapp.com",
-      databaseURL: "https://historyunited-61508.firebaseio.com",
-      projectId: "historyunited-61508",
-      storageBucket: "historyunited-61508.appspot.com",
-      messagingSenderId: "752721294693",
-      appId: "1:752721294693:web:116701c67ce46f49859d8c",
-     measurementId: "G-5GP36786WK"
-    };
-    alert("before firebase intitalizeApp")
-    if (!firebase.apps.length) {
-     alert("in if statement")
-      firebase.initializeApp(firebaseConfig);
+  <script>
+    var eventKey;
+    var keys;
+    function setup() {
+      alert("hello")
+      const firebaseConfig = {
+        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
+        authDomain: "historyunited-61508.firebaseapp.com",
+        databaseURL: "https://historyunited-61508.firebaseio.com",
+        projectId: "historyunited-61508",
+        storageBucket: "historyunited-61508.appspot.com",
+        messagingSenderId: "752721294693",
+        appId: "1:752721294693:web:116701c67ce46f49859d8c",
+        measurementId: "G-5GP36786WK"
+      };
+      // alert("before firebase intitalizeApp")
+      if (!firebase.apps.length) {
+        alert("in if statement")
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      }
+      // alert("after firevase intitalizeApp")
       firebase.analytics();
-   }
-   alert("after firevase intitalizeApp")
-    firebase.analytics();
-   alert("firebase refereance")
-    var dbRef3 = firebase.database();
-    //var eventsRef3 = dbRef3.ref('events');
-    alert("before database ref")
-    var eventsGetRef = dbRef3.ref("events");
-    alert("after database ref");
-    alert("before firebase get")
-    eventsGetRef.on("value",gotData);
-    alert("after firebase get")
+      //alert("firebase refereance")
+      var dbRef3 = firebase.database();
+      //var eventsRef3 = dbRef3.ref('events');
+      //  alert("before database ref")
+      var eventsGetRef = dbRef3.ref("events");
+      //  alert("after database ref");
+      // alert("before firebase get")
+      eventsGetRef.on("value", gotData);
+      // alert("after firebase get")
 
-    function gotData(data){
-      var eventOneHeader= document.getElementById("eventOneHeader");
-      var eventOneBody = document.getElementById("eventOneBody");
-      alert("in gotData fuction")
-      var events = data.val();
-      keys = Object.keys(events);
-      sessionStorage.setItem("keys", keys);
-      for (var i = 0; i < keys.length; i++){
-      var key = keys[i];
-      alert(key);
-      var event = events[key];
-      alert(event.name)
-      eventOneHeader.innerHTML = event.name;
-      eventOneBody.innerHTML= event.location + event.time;
-      } 
-      
+
+
+      function gotData(data) {
+        // initaialize events
+        var eventOneHeader = document.getElementById("eventOneHeader");
+        var eventOneBody = document.getElementById("eventOneBody");
+        var eventTwoHeader = document.getElementById("eventTwoHeader");
+        var eventTwoBody = document.getElementById("eventTwoBody");
+        var eventThreeHeader = document.getElementById("eventThreeHeader");
+        var eventThreeBody = document.getElementById("eventThreeBody");
+
+
+        // alert("in gotData fuction")
+        var events = data.val();
+        keys = Object.keys(events);
+        sessionStorage.setItem("keys", keys);
+        //for (var i = 0; i < keys.length; i++) {
+        // var key = keys[i];
+        // alert(key);
+        // var event = events[key];
+        // alert(event.name)
+        eventOneHeader.innerHTML = events[keys[0]].name;
+        eventOneBody.innerHTML = events[keys[0]].location + events[keys[0]].time;
+        eventTwoHeader.innerHTML = events[keys[1]].name;
+        eventTwoBody.innerHTML = events[keys[1]].location + events[keys[1]].time;
+        eventThreeHeader.innerHTML = events[keys[2]].name;
+        eventThreeBody.innerHTML = events[keys[2]].location + events[keys[2]].time;
+        // }
+        sessionStorage.setItem("key1", keys[0]);
+        sessionStorage.setItem("key2", keys[1]);
+        sessionStorage.setItem("key3", keys[2]);
+      }
+
+
+
     }
-
-  
-
-  }
   </script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src = "js/learnMore.js"></script>
-  <script src = "js/createAnEvent.js"></script>
-  
+  <script src="js/learnMore.js"></script>
+  <script src="js/createAnEvent.js"></script>
+
 
 
 
