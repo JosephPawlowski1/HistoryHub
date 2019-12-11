@@ -51,7 +51,7 @@ $("#createEventBTN").click(function (){
   eventsRef2.push(data2,finished);
   //alert("after push")
   function finished(error) {
-    alert(error)
+    //alert(error)
     if (error) {
     //  alert("error")
       alert(error)
