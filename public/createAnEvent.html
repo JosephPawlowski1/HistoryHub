@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
 
   <meta charset="utf-8">
@@ -187,7 +187,7 @@
           </div>
           <div id="success"></div>
           <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="createEventBTN">Create event</button>
+          <button type="button" class="btn btn-primary" id="createEventBTN">Create event</button>
         </form>
       </div>
 
@@ -206,60 +206,23 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="js/createAnEvent.js"></script>
+  
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-  <script>
-    function setup() {
-      //alert("hello")
-      const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-      };
-      //alert("before firebase intitalizeApp")
-      if (!firebase.apps.length) {
-        //alert("in if statement")
-        firebase.initializeApp(firebaseConfig);
-      }
-      // alert("after firevase intitalizeApp")
-      firebase.analytics();
-      // alert("firebase refereance")
-      var dbRef = firebase.database();
-      var dbRef = firebase.database();
-      var eventsRef = dbRef.ref('events');
-      eventsRef.on("value", gotData);
-
-
-      function gotData(data) {
-        var events = data.val();
-        var keys = Object.keys(events);
-
-        for (var i = 0; i < keys.length; i++) {
-          var key = keys[i];
-          // alert(key);
-          var event = events[key];
-          // alert(event);
-        }
-      }
-
-
-
-    }
-  </script>
-  <script src="js/createAnEvent.js"></script>
+  
 
   <!-- Contact form JavaScript -->
   <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
   <script src="js/jqBootstrapValidation.js"></script>
-
+  <script src="js/createEvent.js"></script>
+  <script 
+  function  setup() {
+    setup();
+  }
+  ></script>
+  
 
 </body>
 
