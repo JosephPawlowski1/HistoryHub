@@ -11,18 +11,23 @@
   <title>HistoryHub</title>
 
   <!-- Bootstrap core CSS -->
+  
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-
+  <link rel="import" href="navBar.html">
 </head>
+    
+  
 
 <body onload="setup()">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
+    
 
       <a class="navbar-brand" href="index.html">History Hub</a>
 
@@ -33,28 +38,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Alumini</a>
-
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="classes.html">Classes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="events.html">Events</a>
+            <a class="nav-link modal-trigger" href="events.html">Events</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog-home-1.html">Blog</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio-1-col.html">Professors</a>
-          </li>
+          
+        
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Learn More
@@ -63,8 +62,16 @@
               <a class="dropdown-item" href="faq.html">FAQ</a>
               <a class="dropdown-item" href="404.html">404</a>
             </div>
+           
           </li>
           
+          <li class="nav-item">
+            <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+
           <!--
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,6 +99,7 @@
         </ul>
       </div>
     </div>
+    
   </nav>
   <!--    
   <header>
@@ -135,6 +143,43 @@
     </div>
   </header>
 -->
+
+        <!-- SIGN UP MODAL -->
+        <div id="modal-signup" class="modal">
+          <div class="modal-content">
+            <h4>Sign up</h4><br />
+            <form id="signup-form">
+              <div class="input-field">
+                <input type="email" id="signup-email" required />
+                <label for="signup-email">Email address</label>
+              </div>
+              <div class="input-field">
+                <input type="password" id="signup-password" required />
+                <label for="signup-password">Choose password</label>
+              </div>
+              <button class="btn teal darken-2 z-depth-0">Sign up</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn teal darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Page Content -->
   <div class="container">
 
@@ -296,7 +341,10 @@
     <!-- /.container -->
   </footer>
 
+  
 
+
+       
   <!-- Bootstrap core JavaScript -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 
@@ -360,6 +408,9 @@
 
 
   </script>
+
+  <script src = "js/index.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

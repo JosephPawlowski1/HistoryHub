@@ -1,5 +1,4 @@
 function setup() {
-    alert("hello")
     const firebaseConfig = {
         apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
         authDomain: "historyunited-61508.firebaseapp.com",
