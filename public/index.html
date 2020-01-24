@@ -11,7 +11,7 @@
   <title>HistoryHub</title>
 
   <!-- Bootstrap core CSS -->
-  
+
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -19,30 +19,29 @@
   <link href="css/modern-business.css" rel="stylesheet">
   <link rel="import" href="navBar.html">
 </head>
-    
-  
+
+
 
 <body onload="setup()">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-    
+
 
       <a class="navbar-brand" href="index.html">History Hub</a>
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          
+
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          
+
           <li class="nav-item">
             <a class="nav-link" href="class.html">Classes</a>
 
@@ -53,24 +52,28 @@
           <li class="nav-item">
             <a class="nav-link" href="blog-home-1.html">Blog</a>
           </li>
-          
-        
+
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               Learn More
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
               <a class="dropdown-item" href="faq.html">FAQ</a>
               <a class="dropdown-item" href="404.html">404</a>
             </div>
-           
+
           </li>
-          
+
           <li class="nav-item">
             <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+          <li class="logged-in">
+            <a href="#" class="nav-link" id="logout">Logout</a>
           </li>
 
           <!--
@@ -100,7 +103,7 @@
         </ul>
       </div>
     </div>
-    
+
   </nav>
   <!--    
   <header>
@@ -145,25 +148,25 @@
   </header>
 -->
 
-        <!-- SIGN UP MODAL -->
-        <div id="modal-signup" class="modal">
-          <div class="modal-content">
-            <h4>Sign up</h4><br />
-            <form id="signup-form">
-              <div class="input-field">
-                <input type="email" id="signup-email" required />
-                <label for="signup-email">Email address</label>
-              </div>
-              <div class="input-field">
-                <input type="password" id="signup-password" required />
-                <label for="signup-password">Choose password</label>
-              </div>
-              <button class="btn teal darken-2 z-depth-0">Sign up</button>
-            </form>
-          </div>
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
         </div>
-        
-        <!-- LOGIN MODAL -->
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn teal darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
   <div id="modal-login" class="modal">
     <div class="modal-content">
       <h4>Login</h4><br />
@@ -342,10 +345,10 @@
     <!-- /.container -->
   </footer>
 
-  
 
 
-       
+
+
   <!-- Bootstrap core JavaScript -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 
@@ -378,35 +381,35 @@
       };
       //alert("before firebase intitalizeApp")
       if (!firebase.apps.length) {
-      // alert("in if statement")
+        // alert("in if statement")
         firebase.initializeApp(firebaseConfig);
-     }
-     // alert("after firevase intitalizeApp")
+      }
+      // alert("after firevase intitalizeApp")
       firebase.analytics();
-    /*  // alert("firebase refereance")
-      var dbRef = firebase.database();
-      var dbRef = firebase.database();
-      var eventsRef = dbRef.ref('events');
-      var data = {
-       name: "name2",
-        location: "location2",
-        time: "time2",
-        description: "description2"
-      } */
-    
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+      /*  // alert("firebase refereance")
+        var dbRef = firebase.database();
+        var dbRef = firebase.database();
+        var eventsRef = dbRef.ref('events');
+        var data = {
+         name: "name2",
+          location: "location2",
+          time: "time2",
+          description: "description2"
+        } */
 
-    // update firestore settings
-    db.settings({ timestampsInSnapshots: true });
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
 
     }
 
 
   </script>
 
-  <script src = "js/index.js "></script>
+  <script src="js/index.js "></script>
   <script src="js/signup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
