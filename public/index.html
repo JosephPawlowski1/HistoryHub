@@ -22,7 +22,7 @@
 
 
 
-<body onload="setup()">
+
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -367,7 +367,6 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
   <script> //Firebase 
-    function setup() {
       //alert("hello")
       const firebaseConfig = {
         apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
@@ -403,14 +402,10 @@
 
       // update firestore settings
       db.settings({ timestampsInSnapshots: true });
-
-    }
-
-
   </script>
 
-  <script src="js/index.js "></script>
   <script src="js/signup.js"></script>
+  <script src="js/index.js "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
