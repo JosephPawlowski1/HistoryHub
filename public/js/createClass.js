@@ -18,13 +18,13 @@ function setup() {
 
     var dbRef = firebase.database();
     var dbRef = firebase.database();
-    var classRef = dbRef.ref('classs');
-    classRef.on("value", gotData);
+    var classRef = dbRef.ref('class');
+    Ref.on("value", gotData);
 
 
     function gotData(data) {
         var classes = data.val();
-        var keys = Object.keys(classes);
+        var keys = Object.keys(classRef);
 
         for (var i = 0; i < keys.length; i++) {
             var key = keys[i];
@@ -36,10 +36,10 @@ function setup() {
 }
 $("#createClass").click(function () {
 
-    document.location.href = 'createAclass.html';
+    document.location.href = 'class.html';
 });
 
-$("#createclassBTN").click(function () {
+$("#createClassBTN").click(function () {
 
     const firebaseConfig = {
         apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",

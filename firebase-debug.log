@@ -1,29 +1,25 @@
-[debug] [2020-01-25T20:24:44.342Z] ----------------------------------------------------------------------
-[debug] [2020-01-25T20:24:44.343Z] Command:       /usr/local/Cellar/node/12.12.0/bin/node /usr/local/bin/firebase serve
-[debug] [2020-01-25T20:24:44.343Z] CLI Version:   7.8.1
-[debug] [2020-01-25T20:24:44.343Z] Platform:      darwin
-[debug] [2020-01-25T20:24:44.343Z] Node Version:  v12.12.0
-[debug] [2020-01-25T20:24:44.344Z] Time:          Sat Jan 25 2020 14:24:44 GMT-0600 (Central Standard Time)
-[debug] [2020-01-25T20:24:44.344Z] ----------------------------------------------------------------------
-[debug] [2020-01-25T20:24:44.345Z] 
-[debug] [2020-01-25T20:24:44.354Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-01-25T20:24:44.355Z] > authorizing via signed-in user
-[debug] [2020-01-25T20:24:44.355Z] [iam] checking project historyunited-61508 for permissions ["firebase.projects.get"]
-[debug] [2020-01-25T20:24:44.356Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-01-25T20:24:44.356Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-01-25T20:24:44.460Z] <<< HTTP RESPONSE 200
-[debug] [2020-01-25T20:24:44.475Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/historyunited-61508:testIamPermissions  
+[debug] [2020-01-25T21:01:49.338Z] ----------------------------------------------------------------------
+[debug] [2020-01-25T21:01:49.340Z] Command:       /usr/local/Cellar/node/12.12.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-01-25T21:01:49.340Z] CLI Version:   7.8.1
+[debug] [2020-01-25T21:01:49.340Z] Platform:      darwin
+[debug] [2020-01-25T21:01:49.340Z] Node Version:  v12.12.0
+[debug] [2020-01-25T21:01:49.341Z] Time:          Sat Jan 25 2020 15:01:49 GMT-0600 (Central Standard Time)
+[debug] [2020-01-25T21:01:49.341Z] ----------------------------------------------------------------------
+[debug] [2020-01-25T21:01:49.341Z] 
+[debug] [2020-01-25T21:01:49.352Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-25T21:01:49.352Z] > authorizing via signed-in user
+[debug] [2020-01-25T21:01:49.352Z] [iam] checking project historyunited-61508 for permissions ["firebase.projects.get"]
+[debug] [2020-01-25T21:01:49.353Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/historyunited-61508:testIamPermissions  
 
-[debug] [2020-01-25T20:24:44.574Z] <<< HTTP RESPONSE 200
-[debug] [2020-01-25T20:24:44.576Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/historyunited-61508  
+[debug] [2020-01-25T21:01:49.468Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-25T21:01:49.470Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/historyunited-61508  
  
-[debug] [2020-01-25T20:24:44.681Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-25T21:01:49.664Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/ConorKitzhoefer-toledo/Documents/Repo/HistoryHub/HistoryHub'...
 [info] 
-[debug] [2020-01-25T20:24:44.684Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/historyunited-61508/webApps/-/config  
+[debug] [2020-01-25T21:01:49.667Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/historyunited-61508/webApps/-/config  
  
-[debug] [2020-01-25T20:24:44.865Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-25T21:01:49.899Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000

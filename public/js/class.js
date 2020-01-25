@@ -1,4 +1,4 @@
-var classKey;
+var eventKey;
 var keys;
 function setup() {
 
@@ -23,29 +23,29 @@ function setup() {
 
   var dbRef3 = firebase.database();
 
-  var classsGetRef = dbRef3.ref("classs");
+  var classGetRef = dbRef3.ref("classes");
 
-  classsGetRef.on("value", gotData);
+  classGetRef.on("value", gotData);
 
 
 
   var classObjs = [];
   function gotData(data) {
 
-    var classSet = data.val();
-    keys = Object.keys(classSet);
+    var classes = data.val();
+    keys = Object.keys(classGetRef);
     sessionStorage.setItem("keys", keys);
 
     for (var i = 0; i < keys.length; i++) {
       var key = keys[i];
 
-      var classX = classSet[key];
+      var clas = classes[key];
 
       var classObj = {
-        "name": classX.name,
-        "time": classX.time,
-        "location": classX.location,
-        "course description": classX.description
+        "name": clas.name,
+        "time": clas.time,
+        "location": clas.location,
+        "description": clas.description
       };
 
       classObjs.push(classObj);
@@ -57,7 +57,7 @@ function setup() {
 
     let cardContainer;
     var counter = 0;
-    let createTaskCard = (classObjs) => {
+    let createTaskCard = (eventObjs) => {
 
 
       let card = document.createElement('div');
