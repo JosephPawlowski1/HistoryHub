@@ -74,7 +74,7 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Event
+    <h1 class="mt-4 mb-3">Class
       <small></small>
     </h1>
 
@@ -82,7 +82,7 @@
       <li class="breadcrumb-item">
         <a href="index.html">Home</a>
       </li>
-      <li class="breadcrumb-item active">Event</li>
+      <li class="breadcrumb-item active">List of Classes</li>
     </ol>
 
     <!-- Image Header -->
@@ -95,7 +95,7 @@
 
 
     </div>
-    <a id="createAnEvent" href="#" class="btn btn-primary">Create an Event</a>
+    <a id="createAclass" href="#" class="btn btn-primary">Create Class</a>
     <!--row -->
 
   </div>
@@ -113,261 +113,11 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-  <script>
-    var eventKey;
-    var keys;
-    function setup() {
-      //alert("hello")
-      const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-      };
-      // alert("before firebase intitalizeApp")
-      if (!firebase.apps.length) {
-        //alert("in if statement")
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-      }
-      // alert("after firevase intitalizeApp")
-      firebase.analytics();
-      //alert("firebase refereance")
-      var dbRef3 = firebase.database();
-      //var eventsRef3 = dbRef3.ref('events');
-      //  alert("before database ref")
-      var eventsGetRef = dbRef3.ref("events");
-      //  alert("after database ref");
-      // alert("before firebase get")
-      eventsGetRef.on("value", gotData);
-      // alert("after firebase get")
-
-
-      var eventObjs = [];
-      function gotData(data) {
-        // initaialize events
-        //var eventOneHeader = document.getElementById("eventOneHeader");
-        // var eventOneBody = document.getElementById("eventOneBody");
-        // var eventTwoHeader = document.getElementById("eventTwoHeader");
-        // var eventTwoBody = document.getElementById("eventTwoBody");
-        //var eventThreeHeader = document.getElementById("eventThreeHeader");
-        //var eventThreeBody = document.getElementById("eventThreeBody");
-
-
-        // alert("in gotData fuction")
-        var events = data.val();
-        keys = Object.keys(events);
-        sessionStorage.setItem("keys", keys);
-
-        for (var i = 0; i < keys.length; i++) {
-          var key = keys[i];
-          //alert(key);
-          var event = events[key];
-          //alert(event.name);
-          var eventObj = {
-            "name": event.name,
-            "time": event.time,
-            "location": event.location,
-            "description": event.description
-          };
-          //alert(eventObj.name);
-          eventObjs.push(eventObj);
-        }
-
-
-        //eventOneHeader.innerHTML = events[keys[0]].name;
-        //eventOneBody.innerHTML = events[keys[0]].location + events[keys[0]].time;
-        //eventTwoHeader.innerHTML = events[keys[1]].name;
-        //eventTwoBody.innerHTML = events[keys[1]].location + events[keys[1]].time;
-        //eventThreeHeader.innerHTML = events[keys[2]].name;
-        //eventThreeBody.innerHTML = events[keys[2]].location + events[keys[2]].time;
-        // }
-        sessionStorage.setItem("key1", keys[0]);
-        sessionStorage.setItem("key2", keys[1]);
-        sessionStorage.setItem("key3", keys[2]);
-        // alert(eventObjs.length);
-        //for (var i = 0; i < eventObjs.length; i++) {
-        //alert(eventObjs[i].name);
-        // }
-        let cardContainer;
-        var counter = 0;
-        let createTaskCard = (eventObjs) => {
-
-          //alert(eventObjs);    
-          let card = document.createElement('div');
-          card.className = 'col-lg-4 mb-4';
-
-          let cardHeader = document.createElement('div');
-          cardHeader.className = 'card h-100';
-
-          let cardHeaderInner = document.createElement('h4');
-          cardHeaderInner.className = 'card-header'
-          cardHeaderInner.innerHTML = eventObjs.name;
-
-
-          let cardBody = document.createElement('div');
-          cardBody.className = 'card-body';
-
-          let cardBodyInner = document.createElement('p');
-          cardBodyInner.className = 'card-text';
-          cardBodyInner.innerHTML = "Location: " + eventObjs.location;
-
-          let cardBodyInner2 = document.createElement('p');
-          cardBodyInner2.className = 'card-text';
-          cardBodyInner2.innerHTML = "Time: " + eventObjs.time;
-
-
-          let cardFooter = document.createElement('div');
-          cardFooter.className = 'card-footer';
-
-          let cardFooterInner = document.createElement('a');
-          cardFooterInner.id = counter;
-          cardFooterInner.className = 'btn btn-primary';
-          cardFooterInner.innerHTML = 'Learn More';
-          cardFooterInner.href = '#';
-
-
-
-          //let title = document.createElement('h5');
-          //title.innerText = task.title;
-          //title.className = 'card-title';
-
-          //let color = document.createElement('div');
-          //color.innerText = task.color;
-          //color.className = 'card-color';
-
-
-          //cardBody.appendChild(title);
-          //cardBody.appendChild(color);
-          //card.appendChild(cardBody);
-
-          cardHeader.appendChild(cardHeaderInner);
-          cardBodyInner.appendChild(cardBodyInner2);
-          cardBody.appendChild(cardBodyInner);
-          cardFooter.appendChild(cardFooterInner);
-          cardHeader.appendChild(cardBody);
-          cardHeader.appendChild(cardFooter);
-          card.appendChild(cardHeader);
-          cardContainer.appendChild(card);
-          counter++
-
-        }
-
-        let initListOfTasks = () => {
-          if (cardContainer) {
-            document.getElementById('card-container').replaceWith(cardContainer);
-            return;
-          }
-
-          cardContainer = document.getElementById('card-container');
-          eventObjs.forEach((eventObjs) => {
-            createTaskCard(eventObjs);
-          });
-        };
-
-        initListOfTasks();
-      }
-
-      /*   
-       
-       var tasks = [{
-           "title": "home",
-           "color": "blue",
-       },
-       {
-           "title": "city",
-           "color": "green",
-       },
-     {
-       "title":"town",
-       "color":"red",
-     }
-   ];
-   
-   let cardContainer;
-   var counter = 1;
-   let createTaskCard = (task) => {
-   
-     //alert(eventObjs);    
-       let card = document.createElement('div');
-       card.className = 'col-lg-4 mb-4';
-   
-       let cardHeader = document.createElement('div');
-       cardHeader.className = 'card h-100';
-       
-       let cardHeaderInner = document.createElement('h4');
-       cardHeaderInner.className = 'card-header'
-       cardHeaderInner.innerHTML = task.title;
-       
-   
-       let cardBody = document.createElement('div');
-       cardBody.className = 'card-body';
-   
-       let cardBodyInner = document.createElement('p');
-       cardBodyInner.className = 'card-text';
-       cardBodyInner.innerHTML = task.color;
-   
-       let cardFooter = document.createElement('div');
-       cardFooter.className = 'card-footer';
-   
-       let cardFooterInner = document.createElement('a');
-       cardFooterInner.id = counter;
-       cardFooterInner.className = 'btn btn-primary';
-       cardFooterInner.innerHTML = 'Learn More';
-       cardFooterInner.href ='#';
-      
-   
-   
-       //let title = document.createElement('h5');
-       //title.innerText = task.title;
-       //title.className = 'card-title';
-   
-       //let color = document.createElement('div');
-       //color.innerText = task.color;
-       //color.className = 'card-color';
-   
-   
-       //cardBody.appendChild(title);
-       //cardBody.appendChild(color);
-       //card.appendChild(cardBody);
-   
-       cardHeader.appendChild(cardHeaderInner);
-       cardBody.appendChild(cardBodyInner);
-       cardFooter.appendChild(cardFooterInner);
-       cardHeader.appendChild(cardBody);
-       cardHeader.appendChild(cardFooter);
-       card.appendChild(cardHeader);
-       cardContainer.appendChild(card);
-     counter++
-   
-      }
-
-   let initListOfTasks = () => {
-       if (cardContainer) {
-           document.getElementById('card-container').replaceWith(cardContainer);
-           return;
-       }
-
-       cardContainer = document.getElementById('card-container');
-       tasks.forEach((task) => {
-           createTaskCard(task);
-       });
-   };
-
-   initListOfTasks();
-   */
-    }
-  </script>
-  <script>
-  </script>
+  <script src="js/class.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="js/createAnEvent.js"></script>
-  <script src="js/learnMore.js"></script>
+  <script src="js/createClass.js"></script>
+  
 
 
 
