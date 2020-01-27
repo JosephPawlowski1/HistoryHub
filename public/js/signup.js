@@ -1,9 +1,17 @@
+
 // listening for auth status changes for signup and login and user logout
 auth.onAuthStateChanged(user => {
+
   if (user) {
     console.log('user logged in: ', user);
+    $(signup).hide();
+    $(login).hide();
+    
   } else {
     console.log('user logged out');
+    $(logout).hide();
+    $(signup).show();
+    $(login).show();
   }
 })
 
@@ -45,12 +53,15 @@ loginForm.addEventListener('submit', (e) => {
   const password = loginForm['login-password'].value;
 
   // log the user in
+  
  auth.signInWithEmailAndPassword(email, password).then((cred) => {
     console.log(cred.user);
     // close the signup modal & reset form
     const modal = document.querySelector('#modal-login');
     M.Modal.getInstance(modal).close();
     loginForm.reset();
+  
   });
 
+  
 });
