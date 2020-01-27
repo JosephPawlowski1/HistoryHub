@@ -1,5 +1,5 @@
 var eventKey;
-var keys;
+var eventtKeys;
 function setup() {
 
   const firebaseConfig = {
@@ -33,11 +33,11 @@ function setup() {
   function gotData(data) {
 
     var events = data.val();
-    keys = Object.keys(events);
-    sessionStorage.setItem("keys", keys);
+    eventKeys = Object.keys(events);
+    sessionStorage.setItem("eventKeys", eventKeys);
 
-    for (var i = 0; i < keys.length; i++) {
-      var key = keys[i];
+    for (var i = 0; i < eventKeys.length; i++) {
+      var key = eventKeys[i];
 
       var event = events[key];
 
@@ -51,9 +51,7 @@ function setup() {
       eventObjs.push(eventObj);
     }
 
-    sessionStorage.setItem("key1", keys[0]);
-    sessionStorage.setItem("key2", keys[1]);
-    sessionStorage.setItem("key3", keys[2]);
+
 
     let cardContainer;
     var counter = 0;

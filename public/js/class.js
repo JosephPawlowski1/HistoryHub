@@ -1,7 +1,6 @@
 var eventKey;
-var keys;
-function setup() {
-
+var classKeys;
+window.onload = function() {
   const firebaseConfig = {
     apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
     authDomain: "historyunited-61508.firebaseapp.com",
@@ -20,11 +19,12 @@ function setup() {
   }
 
   firebase.analytics();
-
+  
   var dbRef3 = firebase.database();
 
-  var classGetRef = dbRef3.ref("classes");
+  var classGetRef = dbRef3.ref("class");
 
+  
   classGetRef.on("value", gotData);
 
 
@@ -33,12 +33,15 @@ function setup() {
   function gotData(data) {
 
     var classes = data.val();
-    keys = Object.keys(classGetRef);
-    sessionStorage.setItem("keys", keys);
+   
+    classKeys = Object.keys(classes);
+    sessionStorage.setItem("classKeys", classKeys);
+   
+    for (var i = 0; i < classKeys.length; i++) {
 
-    for (var i = 0; i < keys.length; i++) {
-      var key = keys[i];
+      var key = classKeys[i];
 
+    
       var clas = classes[key];
 
       var classObj = {
@@ -50,16 +53,15 @@ function setup() {
 
       classObjs.push(classObj);
     }
+   
 
-    sessionStorage.setItem("key1", keys[0]);
-    sessionStorage.setItem("key2", keys[1]);
-    sessionStorage.setItem("key3", keys[2]);
+
 
     let cardContainer;
     var counter = 0;
-    let createTaskCard = (eventObjs) => {
+    let createTaskCard = (classObjs) => {
 
-
+    
       let card = document.createElement('div');
       card.className = 'col-lg-4 mb-4';
 
@@ -121,3 +123,4 @@ function setup() {
     initListOfTasks();
   }
 }
+
