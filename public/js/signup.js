@@ -6,12 +6,15 @@ auth.onAuthStateChanged(user => {
     console.log('user logged in: ', user);
     $(signup).hide();
     $(login).hide();
+    $(logout).show();
+    
     
   } else {
     console.log('user logged out');
     $(logout).hide();
     $(signup).show();
     $(login).show();
+  
   }
 })
 
