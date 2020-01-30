@@ -123,3 +123,4 @@ window.onload = function() {
     initListOfTasks();
   }
 }
+
