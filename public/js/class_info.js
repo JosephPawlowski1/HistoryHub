@@ -1,7 +1,6 @@
 var eventKey;
 var classKeys;
 window.onload = function() {
-function setup() {
     const firebaseConfig = {
       apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
       authDomain: "historyunited-61508.firebaseapp.com",
@@ -25,15 +24,18 @@ function setup() {
     var array = classKeys.split(",");
     var num = Number(learnMoreNum);
     var classGetOneRef = dbRefClass.ref('class/' + array[num]);
+    alert(classGetOneRef);
     classGetOneRef.on("value", gotData);
+
     function gotData(data) {
-  
       var classHeader = document.getElementById("classHeader");
       var classBodyLoc = document.getElementById("classBodyLoc");
       var classBodyTime = document.getElementById("classBodyTime");
       var classBodyDes = document.getElementById("classBodyDes");
       var clas = data.val();
+      
       classHeader.innerHTML = clas.name;
+
       classBodyLoc.innerHTML = clas.location;
       classBodyTime.innerHTML = clas.time;
       classBodyDes.innerHTML = clas.description;
@@ -69,4 +71,3 @@ function setup() {
   
   
   });
-}
