@@ -1,4 +1,6 @@
-function setup() {
+var eventKeys;
+var eventKey;
+window.onload = function() {
   const firebaseConfig = {
     apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
     authDomain: "historyunited-61508.firebaseapp.com",
@@ -16,12 +18,12 @@ function setup() {
   }
   firebase.analytics();
   var dbRefEvent = firebase.database();
-
-  var keys = sessionStorage.getItem("keys");
+  var key = sessionStorage.getItem("eventKeys");
   var learnMoreNum = sessionStorage.getItem("learnMoreNum");
-  var array = keys.split(",");
+  var array = key.split(",");
   var num = Number(learnMoreNum);
   var eventGetOneRef = dbRefEvent.ref('events/' + array[num]);
+  
   eventGetOneRef.on("value", gotData);
   function gotData(data) {
 
@@ -55,9 +57,9 @@ $("#deleteEvenBTN").on("click", function (event) {
     firebase.initializeApp(firebaseConfig);
   }
   var dbRefDeleteEvent = firebase.database();
-  var keys = sessionStorage.getItem("keys");
+  var key = sessionStorage.getItem("eventKeys");
   var learnMoreNum = sessionStorage.getItem("learnMoreNum");
-  var array = keys.split(",");
+  var array = key.split(",");
   var num = Number(learnMoreNum);
   var eventGetOneRefDelete = dbRefDeleteEvent.ref('events/' + array[num]);
   eventGetOneRefDelete.remove();

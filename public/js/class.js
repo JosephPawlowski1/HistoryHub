@@ -1,7 +1,6 @@
 var eventKey;
-var eventtKeys;
-function setup() {
-
+var classKeys;
+window.onload = function() {
   const firebaseConfig = {
     apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
     authDomain: "historyunited-61508.firebaseapp.com",
@@ -20,44 +19,49 @@ function setup() {
   }
 
   firebase.analytics();
-
+  
   var dbRef3 = firebase.database();
 
-  var eventsGetRef = dbRef3.ref("events");
+  var classGetRef = dbRef3.ref("class");
 
-  eventsGetRef.on("value", gotData);
+  
+  classGetRef.on("value", gotData);
 
 
 
-  var eventObjs = [];
+  var classObjs = [];
   function gotData(data) {
 
-    var events = data.val();
-    eventKeys = Object.keys(events);
-    sessionStorage.setItem("eventKeys", eventKeys);
+    var classes = data.val();
+   
+    classKeys = Object.keys(classes);
+    sessionStorage.setItem("classKeys", classKeys);
+   
+    for (var i = 0; i < classKeys.length; i++) {
 
-    for (var i = 0; i < eventKeys.length; i++) {
-      var key = eventKeys[i];
+      var key = classKeys[i];
 
-      var event = events[key];
+    
+      var clas = classes[key];
 
-      var eventObj = {
-        "name": event.name,
-        "time": event.time,
-        "location": event.location,
-        "description": event.description
+      var classObj = {
+        "name": clas.name,
+        "time": clas.time,
+        "location": clas.location,
+        "description": clas.description
       };
 
-      eventObjs.push(eventObj);
+      classObjs.push(classObj);
     }
+   
 
 
 
     let cardContainer;
     var counter = 0;
-    let createTaskCard = (eventObjs) => {
+    let createTaskCard = (classObjs) => {
 
-
+    
       let card = document.createElement('div');
       card.className = 'col-lg-4 mb-4';
 
@@ -66,7 +70,7 @@ function setup() {
 
       let cardHeaderInner = document.createElement('h4');
       cardHeaderInner.className = 'card-header'
-      cardHeaderInner.innerHTML = eventObjs.name;
+      cardHeaderInner.innerHTML = classObjs.name;
 
 
       let cardBody = document.createElement('div');
@@ -74,11 +78,11 @@ function setup() {
 
       let cardBodyInner = document.createElement('p');
       cardBodyInner.className = 'card-text';
-      cardBodyInner.innerHTML = "Location: " + eventObjs.location;
+      cardBodyInner.innerHTML = "Location: " + classObjs.location;
 
       let cardBodyInner2 = document.createElement('p');
       cardBodyInner2.className = 'card-text';
-      cardBodyInner2.innerHTML = "Time: " + eventObjs.time;
+      cardBodyInner2.innerHTML = "Time: " + classObjs.time;
 
 
       let cardFooter = document.createElement('div');
@@ -88,7 +92,7 @@ function setup() {
       cardFooterInner.id = counter;
       cardFooterInner.className = 'btn btn-primary';
       cardFooterInner.innerHTML = 'Learn More';
-      cardFooterInner.href = '#';
+      cardFooterInner.href = 'class-info.html';
 
 
 
@@ -111,11 +115,12 @@ function setup() {
       }
 
       cardContainer = document.getElementById('card-container');
-      eventObjs.forEach((eventObjs) => {
-        createTaskCard(eventObjs);
+      classObjs.forEach((classObjs) => {
+        createTaskCard(classObjs);
       });
     };
 
     initListOfTasks();
   }
 }
+
