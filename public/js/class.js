@@ -92,7 +92,7 @@ window.onload = function() {
       cardFooterInner.id = counter;
       cardFooterInner.className = 'btn btn-primary';
       cardFooterInner.innerHTML = 'Learn More';
-      cardFooterInner.href = '#';
+      cardFooterInner.href = 'class-info.html';
 
 
 
