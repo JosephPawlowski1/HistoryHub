@@ -367,7 +367,10 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
   <script> //Firebase 
-      //alert("hello")
+
+    function setup() {
+    
+
       const firebaseConfig = {
         apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
         authDomain: "historyunited-61508.firebaseapp.com",
@@ -382,6 +385,10 @@
       if (!firebase.apps.length) {
         // alert("in if statement")
         firebase.initializeApp(firebaseConfig);
+
+     }
+     
+
       }
       // alert("after firevase intitalizeApp")
       firebase.analytics();
