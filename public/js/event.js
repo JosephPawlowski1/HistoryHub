@@ -28,8 +28,6 @@ function setup() {
 
   eventsGetRef.on("value", gotData);
 
-
-
   var eventObjs = [];
   function gotData(data) {
 

@@ -1,4 +1,4 @@
-
+// listening for auth status changes for signup and login and user logout
 auth.onAuthStateChanged(user => {
 
   if (user) {
@@ -10,9 +10,10 @@ auth.onAuthStateChanged(user => {
     
   } else {
     console.log('user logged out');
+    $(logout).hide();
     $(signup).show();
     $(login).show();
-    $(logout).hide();
+  
   }
 })
 
@@ -63,6 +64,5 @@ loginForm.addEventListener('submit', (e) => {
     loginForm.reset();
   
   });
-
   
 });

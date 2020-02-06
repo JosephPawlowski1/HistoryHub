@@ -1,8 +1,4 @@
 
-    var dbRef = firebase.database();
-    var dbRef = firebase.database();
-    var eventsRef = dbRef.ref('events');
-    eventsRef.on("value", gotData);
 
 
     function gotData(data) {
@@ -41,6 +37,10 @@ $("#createEventBTN").click(function () {
         firebase.analytics();
     }
 
+    var dbRef = firebase.database();
+    var eventsRef = dbRef.ref('events');
+    eventsRef.on("value", gotData);
+
     var name2 = $("input#name").val();
     var location2 = $("input#location").val();
     var time2 = $("input#time").val();
@@ -55,6 +55,10 @@ $("#createEventBTN").click(function () {
         time: time2,
         description: description2
     }
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
 
     eventsRef2.push(data2, finished);
 
