@@ -367,8 +367,6 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
   <script> //Firebase 
-
-    function setup() {
     
 
       const firebaseConfig = {
@@ -382,14 +380,11 @@
         measurementId: "G-5GP36786WK"
       };
       //alert("before firebase intitalizeApp")
-      if (!firebase.apps.length) {
-        // alert("in if statement")
+      
         firebase.initializeApp(firebaseConfig);
-
-     }
      
 
-      }
+      
       // alert("after firevase intitalizeApp")
       firebase.analytics();
       /*  // alert("firebase refereance")

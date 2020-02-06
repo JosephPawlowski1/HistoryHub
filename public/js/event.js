@@ -22,6 +22,7 @@ function setup() {
   firebase.analytics();
 
   var dbRef3 = firebase.database();
+  
 
   var eventsGetRef = dbRef3.ref("events");
 
