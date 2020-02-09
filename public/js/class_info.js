@@ -1,3 +1,5 @@
+//This code allows users to be able to read and/or post information about a class
+
 var eventKey;
 var classKeys;
 window.onload = function() {
@@ -59,6 +61,7 @@ window.onload = function() {
   
       firebase.initializeApp(firebaseConfig);
     }
+    //deletes class post from the HTMP page and from the dataset that was stored in memory in the back end
     var dbRefDeleteClass = firebase.database();
     classKeys = sessionStorage.getItem("classKeys");
     var learnMoreNum = sessionStorage.getItem("learnMoreNum");
