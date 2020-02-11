@@ -1,3 +1,4 @@
+
 // listening for auth status changes for signup and login and user logout
 auth.onAuthStateChanged(user => {
 

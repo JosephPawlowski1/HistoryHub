@@ -60,18 +60,55 @@
                 <a class="dropdown-item" href="404.html">404</a>
               </div>
              
-            </li>
-            
-            <li class="nav-item">
-              <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
-            </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link modal-trigger" id = login data-target="modal-login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link modal-trigger" id = signup data-target="modal-signup">Sign up</a>
+              </li>
+              <li class="logged-in">
+                <a href="#" class="nav-link" id="logout">Logout</a>
+              </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn teal darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn teal darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
 
   <!-- Page Content -->
   <div class="container">
@@ -150,10 +187,14 @@
   <!-- Contact form JavaScript -->
   <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
   <script src="js/jqBootstrapValidation.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
   <script src="js/createEvent.js"></script>
-  <script src="index.html"></script>
-  <script src="js/event.js"></script>
+  <script src="js/firebase.js"></script>
   <script src="js/signup.js"></script>
+  <script src="js/event.js"></script>
+  
   <script 
   function  setup() {
     setup();
