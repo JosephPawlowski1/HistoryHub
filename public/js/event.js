@@ -2,7 +2,11 @@
 
 function setup() {
 
-  
+  var login = sessionStorage.getItem("login");
+  if(login == 1)
+  {
+    document.getElementById('createAnEvent').hide;
+  }
   
 
   var eventsGetRef = dbRef.ref("events");

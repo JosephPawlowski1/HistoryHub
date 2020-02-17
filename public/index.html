@@ -13,7 +13,7 @@
   <!-- Bootstrap core CSS -->
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -27,61 +27,50 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-
-
       <a class="navbar-brand" href="index.html">History Hub</a>
-
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="class.html">Classes</a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link modal-trigger" href="events.html">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog-home-1.html">Blog</a>
-          </li>
-
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Learn More
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="404.html">404</a>
-            </div>
-
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link modal-trigger" id = login data-target="modal-login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link modal-trigger" id = signup data-target="modal-signup">Sign up</a>
-          </li>
-          <li class="logged-in">
-            <a href="#" class="nav-link" id="logout">Logout</a>
-          </li>
-
+            <a class="nav-link" href="login.html">Login</a>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="class.html">Classes</a>
+  
+            </li>
+            <li class="nav-item">
+              <a class="nav-link modal-trigger" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog-home-1.html">Blog</a>
+            </li>
+            
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Learn More
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="faq.html">FAQ</a>
+                <a class="dropdown-item" href="404.html">404</a>
+              </div>
+             
+            </li>
+            
+            <li class="nav-item">
+              <a href="login.html" class="nav-link ">Login/Logout</a>
+            </li>
           <!--
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Blog
             </a>
-            <div class="dropdasdfasdfdsaasfdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
               <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
               <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
               <a class="dropdown-item" href="blog-post.html">Blog Post</a>
@@ -103,9 +92,8 @@
         </ul>
       </div>
     </div>
-
   </nav>
-  <!--    
+<!--    
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -148,41 +136,7 @@
   </header>
 -->
 
-  <!-- SIGN UP MODAL -->
-  <div id="modal-signup" class="modal">
-    <div class="modal-content">
-      <h4>Sign up</h4><br />
-      <form id="signup-form">
-        <div class="input-field">
-          <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="signup-password" required />
-          <label for="signup-password">Choose password</label>
-        </div>
-        <button class="btn teal darken-2 z-depth-0">Sign up</button>
-      </form>
-    </div>
-  </div>
 
-  <!-- LOGIN MODAL -->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
-      <h4>Login</h4><br />
-      <form id="login-form">
-        <div class="input-field">
-          <input type="email" id="login-email" required />
-          <label for="login-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="login-password" required />
-          <label for="login-password">Your password</label>
-        </div>
-        <button class="btn teal darken-2 z-depth-0">Login</button>
-      </form>
-    </div>
-  </div>
 
   <!-- Page Content -->
   <div class="container">
@@ -382,7 +336,6 @@
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/signup.js"></script>
   <script src="js/index.js "></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
