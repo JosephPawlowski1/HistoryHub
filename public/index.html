@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,10 +13,11 @@
   <!-- Bootstrap core CSS -->
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
+
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
   <link rel="import" href="navBar.html">
 </head>
 
@@ -24,48 +25,51 @@
 
 
 
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">History Hub</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="class.html">Classes</a>
-  
-            </li>
-            <li class="nav-item">
-              <a class="nav-link modal-trigger" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog-home-1.html">Blog</a>
-            </li>
-            
-          
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Learn More
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="404.html">404</a>
-              </div>
-             
-            </li>
-            
-            <li class="nav-item">
-              <a href="login.html" class="nav-link ">Login/Logout</a>
-            </li>
-          <!--
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-image fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">History Hub</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="class.html">Classes</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link modal-trigger" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog-home-1.html">Blog</a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Learn More
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" href="faq.html">FAQ</a>
+            <a class="dropdown-item" href="404.html">404</a>
+          </div>
+
+        </li>
+
+        <li class="nav-item">
+          <a href="login.html" class="nav-link ">Login/Logout</a>
+        </li>
+        <!--
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Blog
@@ -89,255 +93,89 @@
           
           </li>
         -->
-        </ul>
-      </div>
+      </ul>
     </div>
-  </nav>
-<!--    
-  <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-       
-        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>First Slide</h3>
-            <p>This is a description for the first slide.</p>
-          </div>
-        </div>
-        
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
-          </div>
-        </div>
-      
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
-            <p>This is a description for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </header>
--->
+  </div>
+</nav>
 
+<body>
+  <img
+    src="https://images.unsplash.com/photo-1578318774420-677a96c0cf8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2690&q=80" class="histimg">
+</body>
 
-
-  <!-- Page Content -->
+<!-- /.container -->
+<footer class="py-5 bg-dark">
   <div class="container">
 
-    <h1 class="my-4">Welcome to History Hub</h1>
-
-    <!-- Marketing Icons Section -->
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Class One</h4>
-          <div class="card-body">
-            <p class="card-text">Here is information about Class one.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Class Two</h4>
-          <div class="card-body">
-            <p class="card-text">information about Class two</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Class Three</h4>
-          <div class="card-body">
-            <p class="card-text">Information about Class three</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Portfolio Section -->
-    <h2>Professors</h2>
-
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Professor One</a>
-            </h4>
-            <p class="card-text">Information about Professor One</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Professor Two</a>
-            </h4>
-            <p class="card-text">Information about Proessor Two</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Professor Three</a>
-            </h4>
-            <p class="card-text">Information about Professor Three</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Professor Four</a>
-            </h4>
-            <p class="card-text">Information about Professor Four</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Professor Five</a>
-            </h4>
-            <p class="card-text">Information about Professor Five</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Professor Six</a>
-            </h4>
-            <p class="card-text">Information about Professor Six</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-    <!-- Call to Action Section -->
-    <div class="row mb-4">
-      <div class="col-md-8">
-        <p></p>
-      </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Return to Top</a>
-      </div>
-    </div>
-
+    <p class="m-0 text-center text-white">Copyright &copy; History Hub 2019</p>
   </div>
   <!-- /.container -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-
-      <p class="m-0 text-center text-white">Copyright &copy; History Hub 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+</footer>
 
 
 
 
 
-  <!-- Bootstrap core JavaScript -->
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- Bootstrap core JavaScript -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
 
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
-  <!-- Initialize Firebase -->
+<!-- Initialize Firebase -->
 
 
-  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
-  <script> //Firebase 
-  
-      const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-      };
-      //alert("before firebase intitalizeApp")
-      
-        firebase.initializeApp(firebaseConfig);
-     
+<script> //Firebase 
 
-      
-      // alert("after firevase intitalizeApp")
-      firebase.analytics();
-      /*  // alert("firebase refereance")
-        var dbRef = firebase.database();
-        var dbRef = firebase.database();
-        var eventsRef = dbRef.ref('events');
-        var data = {
-         name: "name2",
-          location: "location2",
-          time: "time2",
-          description: "description2"
-        } */
+  const firebaseConfig = {
+    apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
+    authDomain: "historyunited-61508.firebaseapp.com",
+    databaseURL: "https://historyunited-61508.firebaseio.com",
+    projectId: "historyunited-61508",
+    storageBucket: "historyunited-61508.appspot.com",
+    messagingSenderId: "752721294693",
+    appId: "1:752721294693:web:116701c67ce46f49859d8c",
+    measurementId: "G-5GP36786WK"
+  };
+  //alert("before firebase intitalizeApp")
 
-      // make auth and firestore references
-      const auth = firebase.auth();
-      const db = firebase.firestore();
+  firebase.initializeApp(firebaseConfig);
 
-      // update firestore settings
-      db.settings({ timestampsInSnapshots: true });
-  </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/index.js "></script>
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  // alert("after firevase intitalizeApp")
+  firebase.analytics();
+  /*  // alert("firebase refereance")
+    var dbRef = firebase.database();
+    var dbRef = firebase.database();
+    var eventsRef = dbRef.ref('events');
+    var data = {
+     name: "name2",
+      location: "location2",
+      time: "time2",
+      description: "description2"
+    } */
+
+  // make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // update firestore settings
+  db.settings({ timestampsInSnapshots: true });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/index.js "></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
