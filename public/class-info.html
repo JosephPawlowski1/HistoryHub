@@ -20,76 +20,58 @@
 
 <body>
 
-   <!-- Navigation -->
-   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">History Hub</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="class.html">Classes</a>
-  
-            </li>
-            <li class="nav-item">
-              <a class="nav-link modal-trigger" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog-home-1.html">Blog</a>
-            </li>
-            
-          
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Learn More
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="404.html">404</a>
-              </div>
-             
-            </li>
-            
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">Login/Logout</a>
-            </li>
-          <!--
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-            </div>
+            <a class="nav-link color-me" href="about.html">About</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link color-me" href="class.html">Classes</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link modal-trigger color-me" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-me" href="blog-home-1.html">Blog</a>
+          </li>
+
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Learn More
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
               <a class="dropdown-item" href="faq.html">FAQ</a>
               <a class="dropdown-item" href="404.html">404</a>
+              <a class="dropdown-item" href="contact.html">Contact Us:</a>
             </div>
-          
+
           </li>
-        -->
+
+          <li class="nav-item">
+            <a href="login.html" class="nav-link  color-me" id="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link color-me" id="loginout">Logout</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-<!--    
+  <!--    
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -135,7 +117,7 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 id = "classHeader" class="mt-4 mb-3">
+    <h1 id="classHeader" class="mt-4 mb-3">
 
     </h1>
 
@@ -151,13 +133,13 @@
       <div class="col-lg-6">
         <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
       </div>
-      <div  class="col-lg-6">
+      <div class="col-lg-6">
         <h2></h2>
-        <p id = "classBodyLoc"></p> 
-        <p id = "classBodyTime"></p>
-        <p id = "classBodyDes"></p>
+        <p id="classBodyLoc"></p>
+        <p id="classBodyTime"></p>
+        <p id="classBodyDes"></p>
       </div>
-      
+
     </div>
     <button type="submit" class="btn btn-primary" id="deleteClassBTN">Delete Class</button>
     <!-- /.row -->
@@ -177,8 +159,17 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src = "js/class_info.js"></script>
-  
+  <script src="js/class_info.js"></script>
+  <script>
+    var login = sessionStorage.getItem("login");
+    console.log(login);
+    if (login == 0) {
+      document.getElementById("loginout").style.visibility = "hidden";
+    }
+    else {
+      document.getElementById("login").style.visibility = "hidden";
+    }
+  </script>
 
 </body>
 
