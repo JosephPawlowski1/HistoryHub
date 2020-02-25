@@ -2,19 +2,35 @@
   --input-padding-x: 1.5rem;
   --input-padding-y: 0.75rem;
 }
-
+body { 
+  padding-top: 100px; 
+}
 .login,
 .image {
   min-height: 100vh;
 }
-
+.color-me{
+  color:black;
+}
 .histimg {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
-  height: 75%;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; 
+  padding-bottom: 10px;
 }
+.loginimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; 
+  padding-bottom: 10px;
+}
+
 
 .bg-image {
   background-image: url('https://images.unsplash.com/photo-1504004581186-ec07a08d8256?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
@@ -23,7 +39,7 @@
 }
 
 .nav-image {
-  background-image: url('https://images.unsplash.com/photo-1458040937381-49c067dfd49a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+  background-image: url('https://images.unsplash.com/photo-1555021053-2db0fdfadf66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
   background-position: center;
 }

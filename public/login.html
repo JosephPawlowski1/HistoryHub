@@ -9,11 +9,13 @@
   
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <
+    
 
   
     <!-- Custom styles for this template -->
+    
     <link href="css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    
   
   </head>
@@ -26,8 +28,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
@@ -58,108 +58,27 @@
             <li class="nav-item">
               <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login/Logout</a>
             </li>
-          <!--
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="404.html">404</a>
-            </div>
-          
-          </li>
-        -->
         </ul>
       </div>
     </div>
   </nav>
-<!--    
-  <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-       
-        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>First Slide</h3>
-            <p>This is a description for the first slide.</p>
-          </div>
-        </div>
-        
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
-          </div>
-        </div>
-      
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
-            <p>This is a description for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </header>
--->
+<!---
 <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="row ">
       <div class="col-md-8 col-lg-6">
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
+               
                 <h3 class="login-heading mb-4">Welcome back!</h3>
                 <form>
-                  <div class="form-label-group">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                    <label for="inputEmail">Email address</label>
-                  </div>
-  
-                  <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                    <label for="inputPassword">Password</label>
-                  </div>
-  
-                  <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Remember password</label>
-                  </div>
-                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" id = "login">Login</button>
-                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" id = "signup">Sign Up</button>
-                  <div class="text-center nav-item">
-                    <a href="#" class="small nav-link modal-trigger" id = signup data-target="modal-signup">Sign up</a></div>
-                  <div class="text-center">
-                    <a class="small" href="#">Forgot password?</a></div>
+                  
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2 modal-trigger" id = "login" data-target="modal-login">Login</button>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2 modal-trigger"  id = "signup" data-target="modal-signup">Sign Up</button>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" id = "logout">Logout</button>
                 </form>
-                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" id = "logout">Logout</button>
+              
               </div>
             </div>
           </div>
@@ -167,8 +86,28 @@
       </div>
     </div>
   </div>
+-->
+<body> 
+  <div class ="container-fluid">
+    
+   
+      
+        <img
+      src="https://images.unsplash.com/photo-1574788175517-f06058bae147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="histimg">
+      <button class="btn  btn-primary  btn-block  text-uppercase font-weight-bold mb-2 modal-trigger" id = "login" data-target="modal-login">Login</button>
+      <button class="btn  btn-primary btn-block  text-uppercase font-weight-bold mb-2 modal-trigger"  id = "signup" data-target="modal-signup"  >Sign Up</button>
+      <button class="btn  btn-primary btn-block  text-uppercase font-weight-bold mb-2" type="submit" id = "logout">Logout</button>
+    
+  
+  </div>
+  </div>
+</div>
+  
 
-  <div id="modal-signup" class="modal">
+</body>
+
+   <!-- SIGN UP MODAL -->
+   <div id="modal-signup" class="modal">
     <div class="modal-content">
       <h4>Sign up</h4><br />
       <form id="signup-form">
@@ -180,7 +119,25 @@
           <input type="password" id="signup-password" required />
           <label for="signup-password">Choose password</label>
         </div>
-        <button class="btn teal darken-2 z-depth-0">Sign up</button>
+        <button class="btn light-teal darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn light-teal darken-2 z-depth-0">Login</button>
       </form>
     </div>
   </div>
@@ -191,7 +148,9 @@
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
+    
       const firebaseConfig = {
         apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
         authDomain: "historyunited-61508.firebaseapp.com",
@@ -207,78 +166,18 @@
 
           firebase.initializeApp(firebaseConfig);
         }
-     
-
-      
-      // alert("after firevase intitalizeApp")
       firebase.analytics();
-      /*  // alert("firebase refereance")
-        var dbRef = firebase.database();
-        var dbRef = firebase.database();
-        var eventsRef = dbRef.ref('events');
-        var data = {
-         name: "name2",
-          location: "location2",
-          time: "time2",
-          description: "description2"
-        } */
-
-      // make auth and firestore references
-      const auth = firebase.auth();
-
-      auth.onAuthStateChanged(user => {
-
-  if (user) {
-      console.log('user logged in: ', user);
-     
-  
-  
-} else {
-  console.log('user logged out');
-  
-
-}
-})
-
-      document.getElementById('login').onclick = function() {
       
-        var email = document.getElementById("inputEmail").value;
-      var password = document.getElementById("inputPassword").value;
-      auth.signInWithEmailAndPassword(email, password).then((cred) => {
-    console.log(cred.user);
-    // close the signup modal & reset form
-      document.getElementById("inputEmail").text-reset;
-      document.getElementById("inputPassword").text-reset;
-      sessionStorage.setItem("login", 1);
-  
-  });
-};
-  document.getElementById('signup').onclick = function() {
- 
-  
-  // get user info
-  var email = document.getElementById("inputEmail").value;
-      var password = document.getElementById("inputPassword").value;
+      const auth = firebase.auth();
+      document.addEventListener('DOMContentLoaded', function() {
 
-  // sign up the user
-  auth.createUserWithEmailAndPassword(email, password).then(cred => {
-    console.log(cred.user);
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
 
-    // close the signup modal & reset form
-    document.getElementById("inputEmail").text-reset;
-      document.getElementById("inputPassword").text-reset;
-      sessionStorage.setItem("login", 1);
-  });
-};
+            var items = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(items);
 
-// logout
-
-document.getElementById('logout').onclick = function() {
-  
-  auth.signOut().then(() => {
-    console.log('user signed out');
-    sessionStorage.setItem("login", 0);
-  })
-};
-
+});
   </script>
+   <script src="js/auth.js"></script>
+  
