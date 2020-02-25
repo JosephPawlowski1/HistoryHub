@@ -24,7 +24,7 @@ window.onload = function() {
     var array = classKeys.split(",");
     var num = Number(learnMoreNum);
     var classGetOneRef = dbRefClass.ref('class/' + array[num]);
-    alert(classGetOneRef);
+    //alert(classGetOneRef);
     classGetOneRef.on("value", gotData);
 
     function gotData(data) {
