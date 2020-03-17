@@ -1,25 +1,4 @@
-function setup() {
-    const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-    };
-    if (!firebase.apps.length) {
 
-        firebase.initializeApp(firebaseConfig);
-    }
-
-    firebase.analytics();
-
-    var dbRef = firebase.database();
-    var dbRef = firebase.database();
-    var eventsRef = dbRef.ref('events');
-    eventsRef.on("value", gotData);
 
 
     function gotData(data) {
@@ -33,7 +12,6 @@ function setup() {
 
         }
     }
-}
 $("#createAnEvent").click(function () {
 
     document.location.href = 'createAnEvent.html';
@@ -41,23 +19,9 @@ $("#createAnEvent").click(function () {
 
 $("#createEventBTN").click(function () {
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-    };
-
-
-    if (!firebase.apps.length) {
-
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    }
+    
+    var eventsRef = dbRef.ref('events');
+    eventsRef.on("value", gotData);
 
     var name2 = $("input#name").val();
     var location2 = $("input#location").val();
@@ -73,6 +37,10 @@ $("#createEventBTN").click(function () {
         time: time2,
         description: description2
     }
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
 
     eventsRef2.push(data2, finished);
 

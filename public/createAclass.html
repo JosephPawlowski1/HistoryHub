@@ -15,69 +15,68 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
 
 </head>
 
 <body onload="setup()">
 
 
-  <!-- Navigation -->
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-  
-        <a class="navbar-brand" href="index.html">History Hub</a>
-  
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Alumini</a>
-  
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="class.html">Classes</a>
-  
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog-home-1.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio-1-col.html">Professors</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Learn More
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="404.html">404</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+   <!-- Navigation -->
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-image bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">History Hub</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+       
+        <li class="nav-item">
+          <a class="nav-link color-me" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link color-me" href="class.html">Classes</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link modal-trigger color-me" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color-me" href="blog-home-1.html">Blog</a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Learn More
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" href="faq.html">FAQ</a>
+            <a class="dropdown-item" href="contact.html">Contact Us:</a>
+            <a class="dropdown-item" href="404.html">404</a>
+          </div>
+
+        </li>
+
+        <li class="nav-item">
+          <a href="login.html" class="nav-link  color-me" id = "login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html" class="nav-link color-me"id = "loginout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
   <!-- Page Content -->
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3"> Create
-      <small>an Class</small>
+    <h1 class="mt-4 mb-3"> Create an Class
     </h1>
 
     <ol class="breadcrumb">
@@ -152,11 +151,18 @@
   <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/createClass.js"></script>
-  <script 
-  function  setup() {
-    setup();
+ <script>
+   var login = sessionStorage.getItem("login");
+  console.log(login);
+  if(login==0)
+  {
+    document.getElementById("loginout").style.visibility = "hidden";
   }
-  ></script>
+  else 
+  {
+    document.getElementById("login").style.visibility = "hidden";
+  }
+ </script>
   
 
 </body>

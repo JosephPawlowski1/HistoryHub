@@ -1,6 +1,13 @@
 var eventKey;
 var classKeys;
 window.onload = function() {
+
+  var login = sessionStorage.getItem("login");
+  if(login == 0)
+  {
+    document.getElementById('createClass').hide;
+  }
+
   const firebaseConfig = {
     apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
     authDomain: "historyunited-61508.firebaseapp.com",
