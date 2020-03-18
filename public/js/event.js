@@ -3,8 +3,8 @@
 window.onload = function() {
   
 
-  
-
+  //var dbRef = sessionStorage.getItem("dbRef");
+  //this.console.log(dbRef.);
   var eventsGetRef = dbRef.ref("events");
 
   eventsGetRef.on("value", gotData);

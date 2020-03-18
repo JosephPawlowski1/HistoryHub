@@ -28,8 +28,8 @@ $("#createEventBTN").click(function () {
     var time2 = $("input#time").val();
     var description2 = $("textarea#description").val();
 
-    var dbRef2 = firebase.database();
-    var eventsRef2 = dbRef2.ref('events');
+    
+    var eventsRef2 = dbRef.ref('events');
 
     var data2 = {
         name: name2,
@@ -40,9 +40,8 @@ $("#createEventBTN").click(function () {
 
       // make auth and firestore references
       const auth = firebase.auth();
-      const db = firebase.firestore();
-
-    eventsRef2.push(data2, finished);
+     
+    eventsRef.push(data2, finished);
 
     function finished(error) {
 
