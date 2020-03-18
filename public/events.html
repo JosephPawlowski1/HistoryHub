@@ -117,25 +117,11 @@
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+  <script src="js/firebase.js"></script>
   <script>
-       const firebaseConfig = {
-  apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-  authDomain: "historyunited-61508.firebaseapp.com",
-  databaseURL: "https://historyunited-61508.firebaseio.com",
-  projectId: "historyunited-61508",
-  storageBucket: "historyunited-61508.appspot.com",
-  messagingSenderId: "752721294693",
-  appId: "1:752721294693:web:116701c67ce46f49859d8c",
-  measurementId: "G-5GP36786WK"
-};
 
-if (!firebase.apps.length) {
-
-  firebase.initializeApp(firebaseConfig);
-}
-firebase.analytics();
     // make auth and firestore references
-  const dbRef = firebase.database();
+
   var login = sessionStorage.getItem("login");
   console.log(login);
   if(login==0)
