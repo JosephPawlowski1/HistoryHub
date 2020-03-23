@@ -21,6 +21,8 @@ window.onload = function() {
     eventBodyTime.innerHTML = event.time;
     eventBodyDes.innerHTML = event.description;
   }
+
+  
 }
 
 
