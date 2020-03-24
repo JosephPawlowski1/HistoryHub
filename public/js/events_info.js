@@ -25,7 +25,11 @@ window.onload = function() {
   
 }
 
-
+$("commentEventBTN").on("click", function (event){
+  alert("GOT HERE");
+  document.location.href = 'createEventComment.html';
+ 
+});
 
 $("#deleteEvenBTN").on("click", function (event) {
   

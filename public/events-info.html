@@ -141,6 +141,7 @@
       </div>
 
     </div>
+    <a id="createEventComment" href="createEventComment.html" class="btn btn-primary">Write Comment</a>
     <button type="submit" class="btn btn-primary" id="deleteEvenBTN">Delete Event</button>
     <!-- /.row -->
   </div>
@@ -155,12 +156,15 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
-  <script src= "js/firebase.js"></script>
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src=js/firebase.js></script>
   <script>
     var login = sessionStorage.getItem("login");
     console.log(login);

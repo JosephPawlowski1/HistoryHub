@@ -17,6 +17,8 @@ $("#createAnEvent").click(function () {
     document.location.href = 'createAnEvent.html';
 });
 
+
+
 $("#createEventBTN").click(function () {
 
     
