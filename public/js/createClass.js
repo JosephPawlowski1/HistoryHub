@@ -19,7 +19,7 @@ function setup() {
     var dbRef = firebase.database();
     var dbRef = firebase.database();
     var classRef = dbRef.ref('class');
-    Ref.on("value", gotData);
+    classRef.on("value", gotData);
 
 
     function gotData(data) {

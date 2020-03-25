@@ -1,25 +1,4 @@
-function setup() {
-    const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-    };
-    if (!firebase.apps.length) {
 
-        firebase.initializeApp(firebaseConfig);
-    }
-
-    firebase.analytics();
-
-    var dbRef = firebase.database();
-    var dbRef = firebase.database();
-    var eventsRef = dbRef.ref('events');
-    eventsRef.on("value", gotData);
 
 
     function gotData(data) {
@@ -33,7 +12,6 @@ function setup() {
 
         }
     }
-}
 $("#createAnEvent").click(function () {
 
     document.location.href = 'createAnEvent.html';
@@ -41,31 +19,17 @@ $("#createAnEvent").click(function () {
 
 $("#createEventBTN").click(function () {
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyA7zxrx4StJObT7CfXMsCzKGCpbfSKnOZs",
-        authDomain: "historyunited-61508.firebaseapp.com",
-        databaseURL: "https://historyunited-61508.firebaseio.com",
-        projectId: "historyunited-61508",
-        storageBucket: "historyunited-61508.appspot.com",
-        messagingSenderId: "752721294693",
-        appId: "1:752721294693:web:116701c67ce46f49859d8c",
-        measurementId: "G-5GP36786WK"
-    };
-
-
-    if (!firebase.apps.length) {
-
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    }
+    
+    var eventsRef = dbRef.ref('events');
+    eventsRef.on("value", gotData);
 
     var name2 = $("input#name").val();
     var location2 = $("input#location").val();
     var time2 = $("input#time").val();
     var description2 = $("textarea#description").val();
 
-    var dbRef2 = firebase.database();
-    var eventsRef2 = dbRef2.ref('events');
+    
+    var eventsRef2 = dbRef.ref('events');
 
     var data2 = {
         name: name2,
@@ -74,7 +38,10 @@ $("#createEventBTN").click(function () {
         description: description2
     }
 
-    eventsRef2.push(data2, finished);
+      // make auth and firestore references
+      const auth = firebase.auth();
+     
+    eventsRef.push(data2, finished);
 
     function finished(error) {
 
