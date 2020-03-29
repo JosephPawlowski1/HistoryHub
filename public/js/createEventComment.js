@@ -18,14 +18,6 @@ $("#writeCommentBTN").on("click", function (event) {
             postTime: time
         }
     };
-
-    
-   
-   
-   
-
-   
-    
     eventGetOneRef.push(data, finished);
     function finished(error) {
 
@@ -38,5 +30,5 @@ $("#writeCommentBTN").on("click", function (event) {
 
         }
     }
-    //document.location.href = 'events.html';
+    document.location.href = 'events.html';
 });
