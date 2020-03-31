@@ -72,48 +72,7 @@
       </div>
     </div>
   </nav>
-  <!--    
-  <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-       
-        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>First Slide</h3>
-            <p>This is a description for the first slide.</p>
-          </div>
-        </div>
-        
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
-          </div>
-        </div>
-      
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
-            <p>This is a description for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </header>
--->
+
   <!-- Page Content -->
   <div class="container">
 
@@ -132,15 +91,14 @@
     <!-- Intro Content -->
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+        <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="" width="400" height="500">
       </div>
-      <div class="col-lg-6">
-        <h2></h2>
+      <div class="container">
         <p id="classBodyLoc"></p>
         <p id="classBodyTime"></p>
         <p id="classBodyDes"></p>
       </div>
-
+      <div id="card-container"></div>
     </div>
     <a id="createClassComment" href="createClassComment.html" class="btn btn-primary">Write Comment</a>
     <button type="submit" class="btn btn-primary" id="deleteClassBTN">Delete Class</button>
@@ -161,7 +119,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src= "js/firebase.js"></script>
+  <script src="js/firebase.js"></script>
   <script src="js/class_info.js"></script>
   <script>
     var login = sessionStorage.getItem("login");
