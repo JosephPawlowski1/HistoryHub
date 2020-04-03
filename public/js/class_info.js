@@ -1,5 +1,4 @@
-var classKeys;
-var classKey;
+
 window.onload = function() {
 
   var key = sessionStorage.getItem("classKeys");
@@ -45,42 +44,14 @@ window.onload = function() {
         "text" : classComment.text,
         "postTime" : classComment.postTime
       };
-  //    console.log(classCommentObj);
+      console.log(classCommentObj);
       classCommentsObjs.push(classCommentObj);
       console.log(classCommentsObjs);
     }
 
   
   
-  var classCommentGetRef = dbRef.ref('class/' + array[num] + '/comments/' );
-  classCommentGetRef.on("value",gotCommentData);
-  var classCommentsObjs = [];
-  function gotCommentData(dataComment){
- 
-    var classComments = dataComment.val();
-    console.log(classComments);
 
-    classCommentsKeys = Object.keys(classComments);
-
-    sessionStorage.setItem("classCommentKeys",classCommentsKeys);
- 
-    for(var i = 0; i < classCommentsKeys.length; i++){
-      console.log(classCommentsKeys[i]);
-      var key = classCommentsKeys[i];
-      var classComment = classComments[key].comment;
-      console.log(classComment.email);
-      console.log(classComment.text);
-      console.log(classComment.postTime);
-      
-      var classCommentObj = {
-        "email": classComment.email,
-        "text" : classComment.text,
-        "postTime" : classComment.postTime
-      };
-      console.log(classCommentObj);
-      classCommentsObjs.push(classCommentObj);
-      console.log(classCommentsObjs)
-    }
   
   
  
@@ -133,8 +104,10 @@ window.onload = function() {
   };
 
   initListOfTasks();
-  }
-
+  
+  
+}
+  
 }
   $("#deleteClassBTN").on("click", function (event) {
  
