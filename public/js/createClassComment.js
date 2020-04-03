@@ -1,5 +1,6 @@
 $("#writeCommentBTN").on("click", function(event) {
-  var key = sessionStorage.getItem("classKeys");
+
+  var key = sessionStorage.getItem("eventKey");
   var array = key.split(",");
   var learnMoreNum = sessionStorage.getItem("learnMoreNum");
   var num = Number(learnMoreNum);
@@ -22,7 +23,6 @@ $("#writeCommentBTN").on("click", function(event) {
       postTime: time
     }
   };
-
   eventGetOneRef.push(data, finished);
   function finished(error) {
     if (error) {
@@ -32,4 +32,5 @@ $("#writeCommentBTN").on("click", function(event) {
       console.log("data saved!");
     }
   }
+  document.location.href = "class.html";
 });

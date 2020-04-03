@@ -1,28 +1,55 @@
-var eventKey;
 var classKeys;
+var classKey;
 window.onload = function() {
-     
-    classKeys = sessionStorage.getItem("classKeys");
-    var learnMoreNum = sessionStorage.getItem("learnMoreNum");
-    var array = classKeys.split(",");
-    var num = Number(learnMoreNum);
-    var classGetOneRef = dbRef.ref('class/' + array[num]);
-    //alert(classGetOneRef);
-    classGetOneRef.on("value", gotData);
 
-    function gotData(data) {
-      var classHeader = document.getElementById("classHeader");
-      var classBodyLoc = document.getElementById("classBodyLoc");
-      var classBodyTime = document.getElementById("classBodyTime");
-      var classBodyDes = document.getElementById("classBodyDes");
-      var clas = data.val();
+  var key = sessionStorage.getItem("classKeys");
+  var learnMoreNum = sessionStorage.getItem("learnMoreNum");
+  var array = key.split(",");
+  var num = Number(learnMoreNum);
+  var classGetOneRef = dbRef.ref('class/' + array[num]);
+
+  classGetOneRef.on("value", gotData);
+  function gotData(data) {
+    var classHeader = document.getElementById("classHeader");
+    var classBodyLoc = document.getElementById("classBodyLoc");
+    var classBodyTime = document.getElementById("classBodyTime");
+    var classBodyDes = document.getElementById("classBodyDes");
+    var event = data.val();
+    classHeader.innerHTML = event.name;
+    classBodyLoc.innerHTML = event.location;
+    classBodyTime.innerHTML = event.time;
+    classBodyDes.innerHTML = event.description;
+  }
+
+  var classCommentGetRef = dbRef.ref("class/" + array[num] + "/comments/");
+  classCommentGetRef.on("value", gotCommentData);
+  var classCommentsObjs = [];
+  function gotCommentData(dataComment) {
+    var classComments = dataComment.val();
+    console.log(classComments);
+
+    classCommentsKeys = Object.keys(classComments);
+
+    sessionStorage.setItem("classCommentKeys", classCommentsKeys);
+
+    for (var i = 0; i < classCommentsKeys.length; i++) {
+      console.log(classCommentsKeys[i]);
+      var key = classCommentsKeys[i];
+      var classComment = classComments[key].comment;
+      console.log(classComment.email);
+      console.log(classComment.text);
+      console.log(classComment.postTime);
       
-      classHeader.innerHTML = clas.name;
-
-      classBodyLoc.innerHTML = clas.location;
-      classBodyTime.innerHTML = clas.time;
-      classBodyDes.innerHTML = clas.description;
+      var classCommentObj = {
+        "email": classComment.email,
+        "text" : classComment.text,
+        "postTime" : classComment.postTime
+      };
+  //    console.log(classCommentObj);
+      classCommentsObjs.push(classCommentObj);
+      console.log(classCommentsObjs);
     }
+
   
   
   var classCommentGetRef = dbRef.ref('class/' + array[num] + '/comments/' );
@@ -123,3 +150,5 @@ window.onload = function() {
   
   
   });
+
+
