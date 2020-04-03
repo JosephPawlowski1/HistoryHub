@@ -14,6 +14,7 @@ auth.onAuthStateChanged(user => {
     
     // get user info
     const email = signupForm['signup-email'].value;
+    sessionStorage.setItem("loginEmail",email);
     const password = signupForm['signup-password'].value;
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
@@ -40,6 +41,7 @@ auth.onAuthStateChanged(user => {
     
     // get user info
     const email = loginForm['login-email'].value;
+    sessionStorage.setItem("loginEmail",email);
     const password = loginForm['login-password'].value;
   
     // log the user in
