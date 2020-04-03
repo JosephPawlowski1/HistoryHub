@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-image bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">History United</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link color-me" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link color-me" href="class.html">Classes</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link modal-trigger color-me" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-me" href="blog-home-1.html">Blog</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Learn More
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="faq.html">FAQ</a>
+              <a class="dropdown-item" href="contact.html">Contact Us:</a>
+              <a class="dropdown-item" href="404.html">404</a>
+            </div>
+
+          </li>
+
+          <li class="nav-item">
+            <a href="login.html" class="nav-link  color-me" id="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link color-me" id="loginout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Affectionately Yours: Captain Brown’s First Christmas in the Army </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Guest Blog: James Marten</li>
+    </ol>
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="imgs/picture1.png" width="500" height="300" alt="pic1">
+        <hr>
+        <!-- Date/Time -->
+        <p>Posted on December 19, 2019 </p>
+        <hr>
+          <!-- Post Content -->
+          <p class="lead">The men may be far from home, but certain traditions continued. Even Santa, as shown in this Thomas Nast illustration, found his way to army camps, lightening the burden of men separated from families.</i>.</p>
+  
+          <p> Ever since, Christmas separations have been staples of holiday-themed pop culture, from the song ‘I’ll Be Home for Christmas” to more recent 
+            heart-tugging videos of mother and fathers returning form long deployments just in time for the holidays 
+            and the recorded messages played during NFL and college football games from soldiers, sailors, 
+            and marines wishing their families Merry Christmas.</p>
+  
+          <p>But Santa did not come to every Civil War-era camp, however, and the letters of Capt. Edwin Brown of the Sixth Wisconsin 
+            Infantry indicate how little time soldiers had for Christmas. Yet they also reveal fleeting thoughts of the happiness they attached to remembered Christmases.  The thirty-year-old had written often since leaving his young wife and 
+            three small children in Fond du Lac in the summer of 1861. The Sixth would later be famous as one of the best and 
+            most bloodied units in the Union army—the Iron Brigade—but by the time the first Christmas of the war rolled around the regiment had spent most of their time drilling.  
+            They’d settled into winter quarters outside Washington, DC,  earlier in the month. Brown was captain of Company E, commanding roughly 100 men in the regiment of just over 1000, but he was also one of the best singers in the regiment, and a founding member of a musical society that entertained their comrades occasionally.</p>
+
+ <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var login = sessionStorage.getItem("login");
+    console.log(login);
+    if (login == 0) {
+      document.getElementById("loginout").style.visibility = "hidden";
+    }
+    else {
+      document.getElementById("login").style.visibility = "hidden";
+    }
+  </script>
+</body>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; History Hub 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+</html>
