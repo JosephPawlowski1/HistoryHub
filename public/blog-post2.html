@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-image bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">History United</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link color-me" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link color-me" href="class.html">Classes</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link modal-trigger color-me" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-me" href="blog-home-1.html">Blog</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Learn More
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="faq.html">FAQ</a>
+              <a class="dropdown-item" href="contact.html">Contact Us:</a>
+              <a class="dropdown-item" href="404.html">404</a>
+            </div>
+
+          </li>
+
+          <li class="nav-item">
+            <a href="login.html" class="nav-link  color-me" id="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link color-me" id="loginout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Timothy G. McMahon Pondering on the Irish 2020 Election </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Guest Blog: Timothy G. McMahon</li>
+    </ol>
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="imgs/irishblog2.jpg" width="500" height="300" alt="Irish">
+        <hr>
+        <!-- Date/Time -->
+        <p>Posted on Feburary 11, 2020 /p>
+        <hr>
+          <!-- Post Content -->
+          <p class="lead">For what it’s worth, I don’t know what’s going to happen in the Republic of Ireland on the heels of the 2020 General Election. 
+              But I know what has happened. The ‘20s have happened, or they’ve started to at least.</i>.</p>
+  
+          <p>On Saturday, nearly 63% of the electorate in the Republic cast their ballots, producing a nearly 
+              three-way tie in the popular vote, with Sinn Féin receiving 24.5% of the vote, Fianna Fáil 22.2%, and Fine Gael, 20.9%. It would be tempting—and it’s a 
+              temptation that has already enticed some wayward pundits in for instance, The Atlantic, to grab for the shiny <a href="https://www.theatlantic.com/international/archive/2020/02/ireland-election-sinn-fein-brexit-nationalism/606328/?fbclid=IwAR2lAoXnxi1vheD-EcDGPH45NsxjcdgQWce0Ayy5D9mS1SJufnqtguDbz2I">bauble</a>—to see the results of the election as an Irish version of the populist/nationalist wave that has hit countries across the globe, including The Philippines, India, Hungary, Poland, Austria, the United Kingdom, and the United States. After all, a nationalist party, Sinn Féin, has shocked the system, outperforming the two traditional power parties (Fianna Fáil and Fina Gael) and attaining the second highest total of seats in Dáil Éireann, the lower house of Ireland’s parliament. Sinn Féin’s 37 seats are a revelation, given that the party did not perform well in recent local or European parliamentary elections. Amazingly, Sinn Féin candidates won 37 of the 42 races they contested, suggesting that just ten more candidates performing at the same breakneck pace would have produced as many as 45 TDs in the coming Dáil, surely enough to guarantee a Sinn Féin-led coalition. What has happened, though, is itself unprecedented in the last century, a virtual three-way tie between a left-of-center upstart and the two disappointed center-right parties. How they determine to work in the days ahead will determine the shape of Irish politics at the crucial time the 
+              country will deal with the aftermath of the United Kingdom’s exit from the European Union.</p>
+  
+          <p>Still, there are signs...</p>
+
+ <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; History Hub 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var login = sessionStorage.getItem("login");
+    console.log(login);
+    if (login == 0) {
+      document.getElementById("loginout").style.visibility = "hidden";
+    }
+    else {
+      document.getElementById("login").style.visibility = "hidden";
+    }
+  </script>
+</body>
+
+</html>
