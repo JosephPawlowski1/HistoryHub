@@ -27,7 +27,7 @@ window.onload = function() {
       console.log(blogComments);
   
       blogCommentsKeys = Object.keys(blogComments);
-  
+      alert(blogCommentsKeys);
       sessionStorage.setItem("blogCommentKeys", blogCommentsKeys);
   
       for (var i = 0; i < blogCommentsKeys.length; i++) {
@@ -102,7 +102,7 @@ window.onload = function() {
   
     $("#deleteBlogBTN").on("click", function(event) {
   
-      blogKeys = sessionStorage.getItem("blogKeys");
+      blogKeys = sessionStorage.getItem("blogKey");
       var learnMoreNum = sessionStorage.getItem("learnMoreNum");
       var array = blogKeys.split(",");
       var num = Number(learnMoreNum);

@@ -52,10 +52,10 @@ window.onload = function() {
 
     
       let card = document.createElement('div');
-      card.blogName = 'col-lg-4 mb-4';
+      card.blogName = 'col-lg-12 mb-4';
 
       let cardHeader = document.createElement('div');
-      cardHeader.blogName = 'card h-100';
+      cardHeader.blogName = 'card h-200';
 
       let cardHeaderInner = document.createElement('h4');
       cardHeaderInner.blogName = 'card-header'
