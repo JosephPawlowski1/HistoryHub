@@ -23,6 +23,12 @@ auth.onAuthStateChanged(user => {
       const modal = document.querySelector('#modal-signup');
       M.Modal.getInstance(modal).close();
       signupForm.reset();
+    }).catch(error =>{
+        console.log(error);
+        alert("Email Already Used For Another Account");
+        const modal = document.querySelector('#modal-signup');
+        M.Modal.getInstance(modal).close();
+        signupForm.reset();
     });
   });
   
@@ -45,12 +51,20 @@ auth.onAuthStateChanged(user => {
     const password = loginForm['login-password'].value;
   
     // log the user in
-    auth.signInWithEmailAndPassword(email, password).then((cred) => {
-      // close the signup modal & reset form
-      sessionStorage.setItem("login", 1);
-      const modal = document.querySelector('#modal-login');
-      M.Modal.getInstance(modal).close();
-      loginForm.reset();
-    });
+      auth.signInWithEmailAndPassword(email, password).then((cred) => {
+        // close the signup modal & reset form
+        sessionStorage.setItem("login", 1);
+        const modal = document.querySelector('#modal-login');
+        M.Modal.getInstance(modal).close();
+        loginForm.reset();
+      }).catch(error =>{
+        console.log(error);
+        alert("Wrong Email/Password Combination");
+        const modal = document.querySelector('#modal-login');
+        M.Modal.getInstance(modal).close();
+        loginForm.reset();
+      });
+    
+    
   
   });
