@@ -1,7 +1,18 @@
+<<<<<<< Updated upstream
 //This code allows users to be able to read and/or post information about a class
 
 var eventKey;
 var classKeys;
+=======
+<<<<<<< HEAD
+
+=======
+//This code allows users to be able to read and/or post information about a class
+
+var eventKey;
+var classKeys;
+>>>>>>> tommysBranch
+>>>>>>> Stashed changes
 window.onload = function() {
      
     classKeys = sessionStorage.getItem("classKeys");
