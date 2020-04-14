@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>HistoryHub</title>
+  <title>Modern Business - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-image bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">History Hub</a>
+      <a class="navbar-brand" href="index.html">History United</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -77,52 +77,54 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 id="classHeader" class="mt-4 mb-3">
-
-    </h1>
+    <h1 class="mt-4 mb-3">Timothy G. McMahon Pondering on the Irish 2020 Election </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="class.html">Class on Campus</a>
+        <a href="index.html">Home</a>
       </li>
-
+      <li class="breadcrumb-item active">Guest Blog: Timothy G. McMahon</li>
     </ol>
 
-    <!-- Intro Content -->
     <div class="row">
-      <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="" width="400" height="500">
-      </div>
-      <div class="container">
-        <p id="classBodyLoc"></p>
-        <p id="classBodyTime"></p>
-        <p id="classBodyDes"></p>
-      </div>
 
-      <div id="card-container" ></div>
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
 
-    </div>
-    <a id="createClassComment" href="createClassComment.html" class="btn btn-primary">Write Comment</a>
-    <button type="submit" class="btn btn-primary" id="deleteClassBTN">Delete Class</button>
-    <!-- /.row -->
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="imgs/irishblog2.jpg" width="500" height="300" alt="Irish">
+        <hr>
+        <!-- Date/Time -->
+        <p>Posted on Feburary 11, 2020 /p>
+        <hr>
+          <!-- Post Content -->
+          <p class="lead">For what it’s worth, I don’t know what’s going to happen in the Republic of Ireland on the heels of the 2020 General Election. 
+              But I know what has happened. The ‘20s have happened, or they’ve started to at least.</i>.</p>
+  
+          <p>On Saturday, nearly 63% of the electorate in the Republic cast their ballots, producing a nearly 
+              three-way tie in the popular vote, with Sinn Féin receiving 24.5% of the vote, Fianna Fáil 22.2%, and Fine Gael, 20.9%. It would be tempting—and it’s a 
+              temptation that has already enticed some wayward pundits in for instance, The Atlantic, to grab for the shiny <a href="https://www.theatlantic.com/international/archive/2020/02/ireland-election-sinn-fein-brexit-nationalism/606328/?fbclid=IwAR2lAoXnxi1vheD-EcDGPH45NsxjcdgQWce0Ayy5D9mS1SJufnqtguDbz2I">bauble</a>—to see the results of the election as an Irish version of the populist/nationalist wave that has hit countries across the globe, including The Philippines, India, Hungary, Poland, Austria, the United Kingdom, and the United States. After all, a nationalist party, Sinn Féin, has shocked the system, outperforming the two traditional power parties (Fianna Fáil and Fina Gael) and attaining the second highest total of seats in Dáil Éireann, the lower house of Ireland’s parliament. Sinn Féin’s 37 seats are a revelation, given that the party did not perform well in recent local or European parliamentary elections. Amazingly, Sinn Féin candidates won 37 of the 42 races they contested, suggesting that just ten more candidates performing at the same breakneck pace would have produced as many as 45 TDs in the coming Dáil, surely enough to guarantee a Sinn Féin-led coalition. What has happened, though, is itself unprecedented in the last century, a virtual three-way tie between a left-of-center upstart and the two disappointed center-right parties. How they determine to work in the days ahead will determine the shape of Irish politics at the crucial time the 
+              country will deal with the aftermath of the United Kingdom’s exit from the European Union.</p>
+  
+          <p>Still, there are signs...</p>
+
+ <!-- /.row -->
+ <a id="createBlogComment" href="createBlogComment.html" class="btn btn-primary">Write Comment</a>
+ <button type="submit" class="btn btn-primary" id="deleteEvenBTN">Delete Event</button>
   </div>
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; History United 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; History Hub 2019</p>
     </div>
     <!-- /.container -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="js/firebase.js"></script>
-  <script src="js/class_info.js"></script>
   <script>
     var login = sessionStorage.getItem("login");
     console.log(login);
@@ -133,7 +135,6 @@
       document.getElementById("login").style.visibility = "hidden";
     }
   </script>
-
 </body>
 
 </html>

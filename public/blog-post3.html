@@ -8,22 +8,23 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>HistoryHub</title>
+  <title>Modern Business - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
 
 </head>
 
-<body onload="setup()">
+<body>
 
   <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-image bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">History Hub</a>
+      <a class="navbar-brand" href="index.html">History United</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -71,58 +72,56 @@
       </div>
     </div>
   </nav>
- 
+
   <!-- Page Content -->
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 id="eventHeader" class="mt-4 mb-3">
-
-    </h1>
+    <h1 class="mt-4 mb-3">Affectionately Yours: Captain Brown’s First Christmas in the Army </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="events.html">Events on Campus</a>
+        <a href="index.html">Home</a>
       </li>
-
+      <li class="breadcrumb-item active">Guest Blog: James Marten</li>
     </ol>
 
-    <!-- Intro Content -->
     <div class="row">
-      <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
-      </div>
-      <div class="col-lg-6">
-        <h2></h2>
-        <p id="eventBodyLoc"></p>
-        <p id="eventBodyTime"></p>
-        <p id="eventBodyDes"></p>
-      </div>
 
-      <div id="card-container" ></div>
-    </div>
-    <a id="createEventComment" href="createEventComment.html" class="btn btn-primary">Write Comment</a>
-    <button type="submit" class="btn btn-primary" id="deleteEvenBTN">Delete Event</button>
-    <!-- /.row -->
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="imgs/picture1.png" width="500" height="300" alt="pic1">
+        <hr>
+        <!-- Date/Time -->
+        <p>Posted on December 19, 2019 </p>
+        <hr>
+          <!-- Post Content -->
+          <p class="lead">The men may be far from home, but certain traditions continued. Even Santa, as shown in this Thomas Nast illustration, found his way to army camps, lightening the burden of men separated from families.</i>.</p>
+  
+          <p> Ever since, Christmas separations have been staples of holiday-themed pop culture, from the song ‘I’ll Be Home for Christmas” to more recent 
+            heart-tugging videos of mother and fathers returning form long deployments just in time for the holidays 
+            and the recorded messages played during NFL and college football games from soldiers, sailors, 
+            and marines wishing their families Merry Christmas.</p>
+  
+          <p>But Santa did not come to every Civil War-era camp, however, and the letters of Capt. Edwin Brown of the Sixth Wisconsin 
+            Infantry indicate how little time soldiers had for Christmas. Yet they also reveal fleeting thoughts of the happiness they attached to remembered Christmases.  The thirty-year-old had written often since leaving his young wife and 
+            three small children in Fond du Lac in the summer of 1861. The Sixth would later be famous as one of the best and 
+            most bloodied units in the Union army—the Iron Brigade—but by the time the first Christmas of the war rolled around the regiment had spent most of their time drilling.  
+            They’d settled into winter quarters outside Washington, DC,  earlier in the month. Brown was captain of Company E, commanding roughly 100 men in the regiment of just over 1000, but he was also one of the best singers in the regiment, and a founding member of a musical society that entertained their comrades occasionally.</p>
+
+ <!-- /.row -->
+ <a id="createBlogComment" href="createBlogComment.html" class="btn btn-primary">Write Comment</a>
+ <button type="submit" class="btn btn-primary" id="deleteEvenBTN">Delete Event</button>
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; History United 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-  <script src=js/firebase.js></script>
   <script>
     var login = sessionStorage.getItem("login");
     console.log(login);
@@ -133,9 +132,14 @@
       document.getElementById("login").style.visibility = "hidden";
     }
   </script>
-  <script src="js/events_info.js"></script>
-
-
 </body>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; History Hub 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
 </html>
