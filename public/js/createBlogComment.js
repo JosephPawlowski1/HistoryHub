@@ -1,11 +1,11 @@
 $("#writeCommentBTN").on("click", function(event) {
 
     var key = sessionStorage.getItem("blogKey");
-    alert('key' + key);
+    //alert('key' + key);
     var array = key.split(",");
     var learnMoreNum = sessionStorage.getItem("learnMoreNum");
     var num = Number(learnMoreNum);
-    alert('num' + num);
+    //alert('num' + num);
     var eventGetOneRef = dbRef.ref("blog/" + array[num] + "/comments/");
     var comment = $("textarea#comment").val();
     var loginEmail = sessionStorage.getItem("loginEmail");

@@ -4,7 +4,7 @@ window.onload = function() {
     var learnMoreNum = sessionStorage.getItem("learnMoreNum");
     var array = key.split(",");
     var num = Number(learnMoreNum);
-    alert(num);
+    //alert(num);
     var blogGetOneRef = dbRef.ref("blog/" + array[num]);
   
     blogGetOneRef.on("value", gotData);
@@ -12,10 +12,13 @@ window.onload = function() {
       var blogHeader = document.getElementById("blogBodyTitle");
       var blogBodyIntro = document.getElementById("blogBodyIntrod");
       var blogBodyDes = document.getElementById("blogBodyDes");
+      var blogAuthor = document.getElementById("blogAuthor");
       var event = data.val();
-      blogHeader.innerHTML = event.name;
-      alert(event.name);
+      //blogHeader.innerHTML = event.name;
+      //alert(event.name);
+
       blogBodyIntro.innerHTML = event.introduction;
+      blogAuthor.innerHTML = event.author;
       blogBodyDes.innerHTML = event.description;
     }
   
@@ -24,14 +27,14 @@ window.onload = function() {
     var blogCommentsObjs = [];
     function gotCommentData(dataComment) {
       var blogComments = dataComment.val();
-      console.log(blogComments);
+      //console.log(blogComments);
   
       blogCommentsKeys = Object.keys(blogComments);
-      alert(blogCommentsKeys);
+      //alert(blogCommentsKeys);
       sessionStorage.setItem("blogCommentKeys", blogCommentsKeys);
   
       for (var i = 0; i < blogCommentsKeys.length; i++) {
-        console.log(blogCommentsKeys[i]);
+        //console.log(blogCommentsKeys[i]);
         var key = blogCommentsKeys[i];
         var blogComment = blogComments[key].comment;
         console.log(blogComment.email);
@@ -46,7 +49,7 @@ window.onload = function() {
         //    console.log(blogCommentObj);
   
         blogCommentsObjs.push(blogCommentObj);
-        console.log(blogCommentsObjs);
+        //console.log(blogCommentsObjs);
       }
   
   
@@ -80,8 +83,8 @@ window.onload = function() {
           cardBasket.appendChild(cardBody);
           card.appendChild(cardImg);
           card.appendChild(cardBasket);
-          console.log(card);
-          console.log(commentContainer);
+          //console.log(card);
+          //console.log(commentContainer);
           commentContainer.appendChild(card);
           counter++;
         };

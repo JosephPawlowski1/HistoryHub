@@ -4,6 +4,7 @@ window.onload = function() {
   var learnMoreNum = sessionStorage.getItem("learnMoreNum");
   var array = key.split(",");
   var num = Number(learnMoreNum);
+  //alert(num);
   var classGetOneRef = dbRef.ref("class/" + array[num]);
 
   classGetOneRef.on("value", gotData);
@@ -14,6 +15,7 @@ window.onload = function() {
     var classBodyDes = document.getElementById("classBodyDes");
     var event = data.val();
     classHeader.innerHTML = event.name;
+    //alert(name);
     classBodyLoc.innerHTML = event.location;
     classBodyTime.innerHTML = event.time;
     classBodyDes.innerHTML = event.description;
@@ -24,19 +26,19 @@ window.onload = function() {
   var classCommentsObjs = [];
   function gotCommentData(dataComment) {
     var classComments = dataComment.val();
-    console.log(classComments);
+    //console.log(classComments);
 
     classCommentsKeys = Object.keys(classComments);
-
+    alert(classCommentsKeys);
     sessionStorage.setItem("classCommentKeys", classCommentsKeys);
 
     for (var i = 0; i < classCommentsKeys.length; i++) {
-      console.log(classCommentsKeys[i]);
+      //console.log(classCommentsKeys[i]);
       var key = classCommentsKeys[i];
       var classComment = classComments[key].comment;
-      console.log(classComment.email);
-      console.log(classComment.text);
-      console.log(classComment.postTime);
+      //console.log(classComment.email);
+      //console.log(classComment.text);
+      //console.log(classComment.postTime);
 
       var classCommentObj = {
         email: classComment.email,
@@ -46,7 +48,7 @@ window.onload = function() {
       //    console.log(classCommentObj);
 
       classCommentsObjs.push(classCommentObj);
-      console.log(classCommentsObjs);
+      //console.log(classCommentsObjs);
     }
 
 
@@ -80,8 +82,8 @@ window.onload = function() {
         cardBasket.appendChild(cardBody);
         card.appendChild(cardImg);
         card.appendChild(cardBasket);
-        console.log(card);
-        console.log(commentContainer);
+        //console.log(card);
+       // console.log(commentContainer);
         commentContainer.appendChild(card);
         counter++;
       };

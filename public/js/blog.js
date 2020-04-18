@@ -37,6 +37,7 @@ window.onload = function() {
       var blogObj = {
         "name": blo.name,
         "introduction": blo.introduction,
+        "author": blo.author,
         "description": blo.description
       };
 
