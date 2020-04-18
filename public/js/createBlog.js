@@ -59,7 +59,7 @@ $("#createBlogBTN").click(function() {
   var author2 = $("input#author").val();
 
   var dbRef2 = firebase.database();
-  alert(dbRef2);
+  //alert(dbRef2);
   var blogRef2 = dbRef2.ref("blog");
 
   var data2 = {

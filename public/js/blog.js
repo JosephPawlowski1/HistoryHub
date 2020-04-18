@@ -24,7 +24,7 @@ window.onload = function() {
     var blogs = data.val();
    
     blogKey = Object.keys(blogs);
-    alert(blogKey);
+    //alert(blogKey);
     sessionStorage.setItem("blogKey", blogKey);
    
     for (var i = 0; i < blogKey.length; i++) {
